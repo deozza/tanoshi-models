@@ -1,21 +1,43 @@
 import { THEMES } from "$lib/enums/GlobalEnums.js";
-import { FONT_SIZES, FONT_WEIGHTS, HEADER_TAGS, HEADER_THEMES, TEXT_ALIGNMENT, TEXT_DECORATIONS, TEXT_TRANSFORMS } from "$lib/enums/TextEnums.js";
+import { FONT_SIZES, FONT_WEIGHTS, LABEL_THEMES, TEXT_ALIGNMENT, TEXT_DECORATIONS, TEXT_TRANSFORMS } from "$lib/enums/TextEnums.js";
 
-export default class TanoshiHeaderModel {
-    private _tag: HEADER_TAGS = HEADER_TAGS.H1;
-    private _fontSize: FONT_SIZES = FONT_SIZES['6Xl'];
-    private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
+export default class TanoshiLabelModel {
+    private _content: string = '';
+    private _forAttr: string;
+    private _textTheme: THEMES|LABEL_THEMES = THEMES.Primary;
+    private _fontSize: FONT_SIZES = FONT_SIZES.Md;
     private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
+    private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
     private _textTransform: TEXT_TRANSFORMS|null = null;
     private _textDecoration: TEXT_DECORATIONS|null = null;
-    private _textTheme: THEMES|HEADER_THEMES = THEMES.Black;
+    private _isVisibile: boolean = true;
 
-    get tag(): HEADER_TAGS {
-        return this._tag;
+    constructor(forAttr: string) {
+        this._forAttr = forAttr;
     }
 
-    set tag(tag: HEADER_TAGS) {
-        this._tag = tag;
+    get content(): string {
+        return this._content;
+    }
+
+    set content(content: string) {
+        this._content = content;
+    }
+
+    get forAttr(): string {
+        return this._forAttr;
+    }
+
+    set forAttr(forAttr: string) {
+        this._forAttr = forAttr;
+    }
+
+    get textTheme(): THEMES|LABEL_THEMES {
+        return this._textTheme;
+    }
+
+    set textTheme(textTheme: THEMES|LABEL_THEMES) {
+        this._textTheme = textTheme;
     }
 
     get fontSize(): FONT_SIZES {
@@ -58,12 +80,11 @@ export default class TanoshiHeaderModel {
         this._textDecoration = textDecoration;
     }
 
-    get textTheme(): THEMES|HEADER_THEMES {
-        return this._textTheme;
+    get isVisibile(): boolean {
+        return this._isVisibile;
     }
 
-    set textTheme(textTheme: THEMES|HEADER_THEMES) {
-        this._textTheme = textTheme;
+    set isVisibile(isVisibile: boolean) {
+        this._isVisibile = isVisibile;
     }
-
 }

@@ -2,29 +2,12 @@ import { THEMES } from "$lib/enums/GlobalEnums.js";
 import { FONT_SIZES, FONT_WEIGHTS, PARAGRAPH_THEMES, TEXT_ALIGNMENT, TEXT_DECORATIONS, TEXT_TRANSFORMS } from "$lib/enums/TextEnums.js";
 
 export default class TanoshiParagraphModel {
-    private _content: string;
     private _fontSize: FONT_SIZES = FONT_SIZES.Md;
     private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
     private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
     private _textTransform: TEXT_TRANSFORMS|null = null;
     private _textDecoration: TEXT_DECORATIONS|null = null;
-    private _theme: THEMES|PARAGRAPH_THEMES = THEMES.Black;
-    private _customClasses: string|null = null;
-
-    constructor(content: string) {
-        this._content = content;
-    }
-
-    get content(): string {
-        return this._content;
-    }
-
-    set content(content: string) {
-        if (content.length === 0) {
-            throw new Error('Paragraph content cannot be empty.');
-        }
-        this._content = content;
-    }
+    private _textTheme: THEMES|PARAGRAPH_THEMES = THEMES.Black;
 
     get fontSize(): FONT_SIZES {
         return this._fontSize;
@@ -66,19 +49,12 @@ export default class TanoshiParagraphModel {
         this._textDecoration = textDecoration;
     }
 
-    get theme(): THEMES|PARAGRAPH_THEMES {
-        return this._theme;
+    get textTheme(): THEMES|PARAGRAPH_THEMES {
+        return this._textTheme;
     }
 
-    set theme(theme: THEMES|PARAGRAPH_THEMES) {
-        this._theme = theme;
+    set textTheme(textTheme: THEMES|PARAGRAPH_THEMES) {
+        this._textTheme = textTheme;
     }
 
-    get customClasses(): string|null {
-        return this._customClasses;
-    }
-
-    set customClasses(customClasses: string|null) {
-        this._customClasses = customClasses;
-    }
 }
