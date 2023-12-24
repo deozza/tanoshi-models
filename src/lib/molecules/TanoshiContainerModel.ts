@@ -1,76 +1,84 @@
-import { type DIRECTIONS, type BACKGROUND_THEMES, type BORDER_THEMES, WRAPS, JUSTIFY_CONTENTS, ALIGN_ITEMS, ALIGN_CONTENTS } from "$lib/enums/ContainerEnums.js";
-import { THEMES } from "$lib/enums/GlobalEnums.js";
+import {
+	type DIRECTIONS,
+	type BACKGROUND_THEMES,
+	type BORDER_THEMES,
+	WRAPS,
+	JUSTIFY_CONTENTS,
+	ALIGN_ITEMS,
+	ALIGN_CONTENTS
+} from '$lib/enums/ContainerEnums.js';
+import { THEMES } from '$lib/enums/GlobalEnums.js';
 
 export default class TanoshiContainerModel {
-    private _backgroundTheme: THEMES|BACKGROUND_THEMES = THEMES.Transparent;
-	private _borderTheme: THEMES|BORDER_THEMES = THEMES.Transparent;
-    private _direction: DIRECTIONS;
-    private _wrap: WRAPS = WRAPS.NoWrap;
-    private _justifyContent: JUSTIFY_CONTENTS = JUSTIFY_CONTENTS.Start;
-    private _alignItems: ALIGN_ITEMS = ALIGN_ITEMS.Start;
-    private _alignContent: ALIGN_CONTENTS = ALIGN_CONTENTS.Start;
-    
-    constructor(direction: DIRECTIONS) {
-        this._direction = direction;
-    }
+	private _backgroundTheme: THEMES | BACKGROUND_THEMES = THEMES.Transparent;
+	private _borderTheme: THEMES | BORDER_THEMES = THEMES.Transparent;
+	private _direction: DIRECTIONS;
+	private _wrap: WRAPS = WRAPS.NoWrap;
+	private _justifyContent: JUSTIFY_CONTENTS = JUSTIFY_CONTENTS.Start;
+	private _alignItems: ALIGN_ITEMS = ALIGN_ITEMS.Start;
+	private _alignContent: ALIGN_CONTENTS = ALIGN_CONTENTS.Start;
 
-    get direction(): DIRECTIONS {
-        return this._direction;
-    }
+	constructor(direction: DIRECTIONS) {
+		this._direction = direction;
+	}
 
-    set direction(direction: DIRECTIONS) {
-        this._direction = direction;
-    }
+	get direction(): DIRECTIONS {
+		return this._direction;
+	}
 
-    get backgroundTheme(): THEMES|BACKGROUND_THEMES {
-        return this._backgroundTheme;
-    }
+	set direction(direction: DIRECTIONS) {
+		this._direction = direction;
+	}
 
-    set backgroundTheme(backgroundTheme: THEMES|BACKGROUND_THEMES) {
-        this._backgroundTheme = backgroundTheme;
-    }
+	get backgroundTheme(): THEMES | BACKGROUND_THEMES {
+		return this._backgroundTheme;
+	}
 
-    get borderTheme(): THEMES|BORDER_THEMES {
-        return this._borderTheme;
-    }
+	set backgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
+		this._backgroundTheme = backgroundTheme;
+	}
 
-    set borderTheme(borderTheme: THEMES|BORDER_THEMES) {
-        this._borderTheme = borderTheme;
-    }
+	get borderTheme(): THEMES | BORDER_THEMES {
+		return this._borderTheme;
+	}
 
-    get wrap(): WRAPS {
-        return this._wrap;
-    }
+	set borderTheme(borderTheme: THEMES | BORDER_THEMES) {
+		this._borderTheme = borderTheme;
+	}
 
-    set wrap(wrap: WRAPS) {
-        this._wrap = wrap;
-    }
+	get wrap(): WRAPS {
+		return this._wrap;
+	}
 
-    get justifyContent(): JUSTIFY_CONTENTS {
-        return this._justifyContent;
-    }
+	set wrap(wrap: WRAPS) {
+		this._wrap = wrap;
+	}
 
-    set justifyContent(justifyContent: JUSTIFY_CONTENTS) {
-        this._justifyContent = justifyContent;
-    }
+	get justifyContent(): JUSTIFY_CONTENTS {
+		return this._justifyContent;
+	}
 
-    get alignItems(): ALIGN_ITEMS {
-        return this._alignItems;
-    }
+	set justifyContent(justifyContent: JUSTIFY_CONTENTS) {
+		this._justifyContent = justifyContent;
+	}
 
-    set alignItems(alignItems: ALIGN_ITEMS) {
-        this._alignItems = alignItems;
-    }
+	get alignItems(): ALIGN_ITEMS {
+		return this._alignItems;
+	}
 
-    get alignContent(): ALIGN_CONTENTS {
-        return this._alignContent;
-    }
+	set alignItems(alignItems: ALIGN_ITEMS) {
+		this._alignItems = alignItems;
+	}
 
-    set alignContent(alignContent: ALIGN_CONTENTS) {
-        if(this._wrap === WRAPS.NoWrap){
-            throw new Error("Cannot set alignContent when wrap is set to NoWrap");
-        }
+	get alignContent(): ALIGN_CONTENTS {
+		return this._alignContent;
+	}
 
-        this._alignContent = alignContent;
-    }
+	set alignContent(alignContent: ALIGN_CONTENTS) {
+		if (this._wrap === WRAPS.NoWrap) {
+			throw new Error('Cannot set alignContent when wrap is set to NoWrap');
+		}
+
+		this._alignContent = alignContent;
+	}
 }

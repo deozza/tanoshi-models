@@ -1,1 +1,1 @@
-export type LOADING_METHODS = "lazy" | "eager";
+export type LOADING_METHODS = 'lazy' | 'eager';
