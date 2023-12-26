@@ -20,8 +20,8 @@ export default class TanoshiParagraphModel {
 		return this._fontSize;
 	}
 
-	set size(size: FONT_SIZES) {
-		this._fontSize = size;
+	set fontSize(fontSize: FONT_SIZES) {
+		this._fontSize = fontSize;
 	}
 
 	get textAlignment(): TEXT_ALIGNMENT {

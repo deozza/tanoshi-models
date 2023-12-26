@@ -10,7 +10,6 @@ import { THEMES } from '$lib/enums/GlobalEnums.js';
 import type { BUTTON_TYPES } from '$lib/types/button.types.js';
 
 export default class TanoshiButtonModel {
-	private _label: string = '';
 	private _type: BUTTON_TYPES = 'button';
 	private _backgroundTheme: THEMES | BACKGROUND_THEMES = THEMES.Primary;
 	private _borderTheme: THEMES | BORDER_THEMES = THEMES.Primary;
@@ -19,15 +18,6 @@ export default class TanoshiButtonModel {
 	private _hoverBorderTheme: THEMES | HOVER_BORDER_THEMES = THEMES.Primary;
 	private _hoverTextTheme: THEMES | HOVER_TEXT_THEMES = THEMES.White;
 	private _isDisabled: boolean = false;
-	private _customClasses: string | null = null;
-
-	get label(): string {
-		return this._label;
-	}
-
-	set label(label: string) {
-		this._label = label;
-	}
 
 	get type(): BUTTON_TYPES {
 		return this._type;
@@ -91,13 +81,5 @@ export default class TanoshiButtonModel {
 
 	set isDisabled(isDisabled: boolean) {
 		this._isDisabled = isDisabled;
-	}
-
-	get customClasses(): string | null {
-		return this._customClasses;
-	}
-
-	set customClasses(customClasses: string | null) {
-		this._customClasses = customClasses;
 	}
 }
