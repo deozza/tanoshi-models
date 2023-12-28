@@ -1,5 +1,12 @@
 import { THEMES } from '$lib/enums/GlobalEnums.js';
-import type { BUTTON_BACKGROUND_THEMES, BUTTON_BORDER_THEMES, BUTTON_HOVER_BACKGROUND_THEMES, BUTTON_HOVER_BORDER_THEMES, BUTTON_HOVER_TEXT_THEMES, BUTTON_TEXT_THEMES } from '$lib/enums/ButtonEnums.js';
+import type {
+	BUTTON_BACKGROUND_THEMES,
+	BUTTON_BORDER_THEMES,
+	BUTTON_HOVER_BACKGROUND_THEMES,
+	BUTTON_HOVER_BORDER_THEMES,
+	BUTTON_HOVER_TEXT_THEMES,
+	BUTTON_TEXT_THEMES
+} from '$lib/enums/ButtonEnums.js';
 import type { BUTTON_TYPES } from '$lib/types/button.types.js';
 
 export default class TanoshiButtonModel {
@@ -37,7 +44,9 @@ export default class TanoshiButtonModel {
 		return this._backgroundTheme;
 	}
 
-	public setBackgroundTheme(backgroundTheme: THEMES | BUTTON_BACKGROUND_THEMES): TanoshiButtonModel {
+	public setBackgroundTheme(
+		backgroundTheme: THEMES | BUTTON_BACKGROUND_THEMES
+	): TanoshiButtonModel {
 		this._backgroundTheme = backgroundTheme;
 
 		return this;
@@ -79,7 +88,9 @@ export default class TanoshiButtonModel {
 		return this._hoverBorderTheme;
 	}
 
-	public setHoverBorderTheme(hoverBorderTheme: THEMES | BUTTON_HOVER_BORDER_THEMES): TanoshiButtonModel {
+	public setHoverBorderTheme(
+		hoverBorderTheme: THEMES | BUTTON_HOVER_BORDER_THEMES
+	): TanoshiButtonModel {
 		this._hoverBorderTheme = hoverBorderTheme;
 
 		return this;

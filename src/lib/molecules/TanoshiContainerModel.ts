@@ -48,7 +48,9 @@ export default class TanoshiContainerModel {
 		return this._backgroundTheme;
 	}
 
-	public setBackgroundTheme(backgroundTheme: THEMES | CONTAINER_BACKGROUND_THEMES): TanoshiContainerModel {
+	public setBackgroundTheme(
+		backgroundTheme: THEMES | CONTAINER_BACKGROUND_THEMES
+	): TanoshiContainerModel {
 		this._backgroundTheme = backgroundTheme;
 
 		return this;

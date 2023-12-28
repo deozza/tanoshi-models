@@ -1,5 +1,9 @@
 import { THEMES } from '$lib/enums/GlobalEnums.js';
-import type { PILL_BACKGROUND_THEMES, PILL_BORDER_THEMES, PILL_TEXT_THEMES } from '$lib/enums/PillEnums.js';
+import type {
+	PILL_BACKGROUND_THEMES,
+	PILL_BORDER_THEMES,
+	PILL_TEXT_THEMES
+} from '$lib/enums/PillEnums.js';
 
 export default class TanoshiPillModel {
 	private _backgroundTheme: THEMES | PILL_BACKGROUND_THEMES = THEMES.Primary;
