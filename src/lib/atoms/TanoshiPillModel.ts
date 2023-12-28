@@ -10,7 +10,7 @@ export default class TanoshiPillModel {
 		return this._backgroundTheme;
 	}
 
-	set backgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
+	public setBackgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
 		this._backgroundTheme = backgroundTheme;
 	}
 
@@ -18,7 +18,7 @@ export default class TanoshiPillModel {
 		return this._borderTheme;
 	}
 
-	set borderTheme(borderTheme: THEMES | BORDER_THEMES) {
+	public setBorderTheme(borderTheme: THEMES | BORDER_THEMES) {
 		this._borderTheme = borderTheme;
 	}
 
@@ -26,7 +26,7 @@ export default class TanoshiPillModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | TEXT_THEMES) {
+	public setTextTheme(textTheme: THEMES | TEXT_THEMES) {
 		this._textTheme = textTheme;
 	}
 }

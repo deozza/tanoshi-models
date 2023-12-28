@@ -10,6 +10,7 @@ import { THEMES } from '$lib/enums/GlobalEnums.js';
 import type { BUTTON_TYPES } from '$lib/types/button.types.js';
 
 export default class TanoshiButtonModel {
+	private _label: string = '';
 	private _type: BUTTON_TYPES = 'button';
 	private _backgroundTheme: THEMES | BACKGROUND_THEMES = THEMES.Primary;
 	private _borderTheme: THEMES | BORDER_THEMES = THEMES.Primary;
@@ -19,11 +20,19 @@ export default class TanoshiButtonModel {
 	private _hoverTextTheme: THEMES | HOVER_TEXT_THEMES = THEMES.White;
 	private _isDisabled: boolean = false;
 
+	get label(): string {
+		return this._label;
+	}
+
+	public setLabel(label: string) {
+		this._label = label;
+	}
+
 	get type(): BUTTON_TYPES {
 		return this._type;
 	}
 
-	set type(type: BUTTON_TYPES) {
+	public setType(type: BUTTON_TYPES) {
 		this._type = type;
 	}
 
@@ -31,7 +40,7 @@ export default class TanoshiButtonModel {
 		return this._backgroundTheme;
 	}
 
-	set backgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
+	public setBackgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
 		this._backgroundTheme = backgroundTheme;
 	}
 
@@ -39,7 +48,7 @@ export default class TanoshiButtonModel {
 		return this._borderTheme;
 	}
 
-	set borderTheme(borderTheme: THEMES | BORDER_THEMES) {
+	public setBorderTheme(borderTheme: THEMES | BORDER_THEMES) {
 		this._borderTheme = borderTheme;
 	}
 
@@ -47,7 +56,7 @@ export default class TanoshiButtonModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | TEXT_THEMES) {
+	public setTextTheme(textTheme: THEMES | TEXT_THEMES) {
 		this._textTheme = textTheme;
 	}
 
@@ -55,7 +64,7 @@ export default class TanoshiButtonModel {
 		return this._hoverBackgroundTheme;
 	}
 
-	set hoverBackgroundTheme(hoverBackgroundTheme: THEMES | HOVER_BACKGROUND_THEMES) {
+	public setHoverBackgroundTheme(hoverBackgroundTheme: THEMES | HOVER_BACKGROUND_THEMES) {
 		this._hoverBackgroundTheme = hoverBackgroundTheme;
 	}
 
@@ -63,7 +72,7 @@ export default class TanoshiButtonModel {
 		return this._hoverBorderTheme;
 	}
 
-	set hoverBorderTheme(hoverBorderTheme: THEMES | HOVER_BORDER_THEMES) {
+	public setHoverBorderTheme(hoverBorderTheme: THEMES | HOVER_BORDER_THEMES) {
 		this._hoverBorderTheme = hoverBorderTheme;
 	}
 
@@ -71,7 +80,7 @@ export default class TanoshiButtonModel {
 		return this._hoverTextTheme;
 	}
 
-	set hoverTextTheme(hoverTextTheme: THEMES | HOVER_TEXT_THEMES) {
+	public setHoverTextTheme(hoverTextTheme: THEMES | HOVER_TEXT_THEMES) {
 		this._hoverTextTheme = hoverTextTheme;
 	}
 
@@ -79,7 +88,7 @@ export default class TanoshiButtonModel {
 		return this._isDisabled;
 	}
 
-	set isDisabled(isDisabled: boolean) {
+	public setIsDisabled(isDisabled: boolean) {
 		this._isDisabled = isDisabled;
 	}
 }

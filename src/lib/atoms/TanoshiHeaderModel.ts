@@ -22,7 +22,7 @@ export default class TanoshiHeaderModel {
 		return this._tag;
 	}
 
-	set tag(tag: HEADER_TAGS) {
+	public setTag(tag: HEADER_TAGS) {
 		this._tag = tag;
 	}
 
@@ -30,7 +30,7 @@ export default class TanoshiHeaderModel {
 		return this._fontSize;
 	}
 
-	set fontSize(fontSize: FONT_SIZES) {
+	public setFontSize(fontSize: FONT_SIZES) {
 		this._fontSize = fontSize;
 	}
 
@@ -38,7 +38,7 @@ export default class TanoshiHeaderModel {
 		return this._fontWeight;
 	}
 
-	set fontWeight(fontWeight: FONT_WEIGHTS) {
+	public setFontWeight(fontWeight: FONT_WEIGHTS) {
 		this._fontWeight = fontWeight;
 	}
 
@@ -46,7 +46,7 @@ export default class TanoshiHeaderModel {
 		return this._textAlignment;
 	}
 
-	set textAlignment(textAlignment: TEXT_ALIGNMENT) {
+	public setTextAlignment(textAlignment: TEXT_ALIGNMENT) {
 		this._textAlignment = textAlignment;
 	}
 
@@ -54,7 +54,7 @@ export default class TanoshiHeaderModel {
 		return this._textTransform;
 	}
 
-	set textTransform(textTransform: TEXT_TRANSFORMS | null) {
+	public setTextTransform(textTransform: TEXT_TRANSFORMS | null) {
 		this._textTransform = textTransform;
 	}
 
@@ -62,7 +62,7 @@ export default class TanoshiHeaderModel {
 		return this._textDecoration;
 	}
 
-	set textDecoration(textDecoration: TEXT_DECORATIONS | null) {
+	public setTextDecoration(textDecoration: TEXT_DECORATIONS | null) {
 		this._textDecoration = textDecoration;
 	}
 
@@ -70,7 +70,7 @@ export default class TanoshiHeaderModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | HEADER_THEMES) {
+	public setTextTheme(textTheme: THEMES | HEADER_THEMES) {
 		this._textTheme = textTheme;
 	}
 }

@@ -27,7 +27,7 @@ export default class TanoshiLabelModel {
 		return this._content;
 	}
 
-	set content(content: string) {
+	public setContent(content: string) {
 		this._content = content;
 	}
 
@@ -35,7 +35,7 @@ export default class TanoshiLabelModel {
 		return this._forAttr;
 	}
 
-	set forAttr(forAttr: string) {
+	public setForAttr(forAttr: string) {
 		this._forAttr = forAttr;
 	}
 
@@ -43,7 +43,7 @@ export default class TanoshiLabelModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | LABEL_THEMES) {
+	public setTextTheme(textTheme: THEMES | LABEL_THEMES) {
 		this._textTheme = textTheme;
 	}
 
@@ -51,7 +51,7 @@ export default class TanoshiLabelModel {
 		return this._fontSize;
 	}
 
-	set fontSize(fontSize: FONT_SIZES) {
+	public setFontSize(fontSize: FONT_SIZES) {
 		this._fontSize = fontSize;
 	}
 
@@ -59,7 +59,7 @@ export default class TanoshiLabelModel {
 		return this._fontWeight;
 	}
 
-	set fontWeight(fontWeight: FONT_WEIGHTS) {
+	public setFontWeight(fontWeight: FONT_WEIGHTS) {
 		this._fontWeight = fontWeight;
 	}
 
@@ -67,7 +67,7 @@ export default class TanoshiLabelModel {
 		return this._textAlignment;
 	}
 
-	set textAlignment(textAlignment: TEXT_ALIGNMENT) {
+	public setTextAlignment(textAlignment: TEXT_ALIGNMENT) {
 		this._textAlignment = textAlignment;
 	}
 
@@ -75,7 +75,7 @@ export default class TanoshiLabelModel {
 		return this._textTransform;
 	}
 
-	set textTransform(textTransform: TEXT_TRANSFORMS | null) {
+	public setTextTransform(textTransform: TEXT_TRANSFORMS | null) {
 		this._textTransform = textTransform;
 	}
 
@@ -83,7 +83,7 @@ export default class TanoshiLabelModel {
 		return this._textDecoration;
 	}
 
-	set textDecoration(textDecoration: TEXT_DECORATIONS | null) {
+	public setTextDecoration(textDecoration: TEXT_DECORATIONS | null) {
 		this._textDecoration = textDecoration;
 	}
 
@@ -91,7 +91,7 @@ export default class TanoshiLabelModel {
 		return this._isVisibile;
 	}
 
-	set isVisibile(isVisibile: boolean) {
+	public setIsVisibile(isVisibile: boolean) {
 		this._isVisibile = isVisibile;
 	}
 }

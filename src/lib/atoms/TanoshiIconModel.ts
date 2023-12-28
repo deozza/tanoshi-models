@@ -15,7 +15,7 @@ export default class TanoshicontentModel {
 		return this._content;
 	}
 
-	set content(content: string) {
+	public setContent(content: string) {
 		this._content = content;
 	}
 
@@ -23,7 +23,7 @@ export default class TanoshicontentModel {
 		return this._height;
 	}
 
-	set height(height: number) {
+	public setHeight(height: number) {
 		this._height = height;
 	}
 
@@ -31,7 +31,7 @@ export default class TanoshicontentModel {
 		return this._width;
 	}
 
-	set width(width: number) {
+	public setWidth(width: number) {
 		this._width = width;
 	}
 
@@ -39,7 +39,7 @@ export default class TanoshicontentModel {
 		return this._theme;
 	}
 
-	set theme(theme: THEMES | ICON_THEMES) {
+	public setTheme(theme: THEMES | ICON_THEMES) {
 		this._theme = theme;
 	}
 }

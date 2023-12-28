@@ -12,7 +12,7 @@ export default class TanoshiInputTextareaModel extends TanoshiInputModel {
 		return this._value;
 	}
 
-	set value(value: string | null) {
+	public setValue(value: string | null) {
 		this._value = value;
 	}
 
@@ -20,7 +20,7 @@ export default class TanoshiInputTextareaModel extends TanoshiInputModel {
 		return this._minLength;
 	}
 
-	set minLength(minLength: number | null) {
+	public setMinLength(minLength: number | null) {
 		this._minLength = minLength;
 	}
 
@@ -28,7 +28,7 @@ export default class TanoshiInputTextareaModel extends TanoshiInputModel {
 		return this._maxLength;
 	}
 
-	set maxLength(maxLength: number | null) {
+	public setMaxLength(maxLength: number | null) {
 		this._maxLength = maxLength;
 	}
 
@@ -36,7 +36,7 @@ export default class TanoshiInputTextareaModel extends TanoshiInputModel {
 		return this._rows;
 	}
 
-	set rows(rows: number) {
+	public setRows(rows: number) {
 		this._rows = rows;
 	}
 
@@ -44,7 +44,7 @@ export default class TanoshiInputTextareaModel extends TanoshiInputModel {
 		return this._cols;
 	}
 
-	set cols(cols: number) {
+	public setCols(cols: number) {
 		this._cols = cols;
 	}
 }

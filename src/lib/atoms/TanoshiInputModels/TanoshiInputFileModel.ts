@@ -9,7 +9,7 @@ export default class TanoshiInputFileModel extends TanoshiInputModel {
 		return this._value;
 	}
 
-	set value(value: FileList | null) {
+	public setValue(value: FileList | null) {
 		this._value = value;
 	}
 
@@ -17,7 +17,7 @@ export default class TanoshiInputFileModel extends TanoshiInputModel {
 		return this._multiple;
 	}
 
-	set multiple(multiple: boolean) {
+	public setMultiple(multiple: boolean) {
 		this._multiple = multiple;
 	}
 
@@ -25,7 +25,7 @@ export default class TanoshiInputFileModel extends TanoshiInputModel {
 		return this._accept;
 	}
 
-	set accept(accept: string | null) {
+	public setAccept(accept: string | null) {
 		this._accept = accept;
 	}
 }

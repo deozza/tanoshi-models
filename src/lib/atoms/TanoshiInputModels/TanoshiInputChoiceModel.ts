@@ -15,7 +15,7 @@ export default class TanoshiInputChoiceModel extends TanoshiInputModel {
 		return this._type;
 	}
 
-	set type(type: HTMLInputTypeAttribute) {
+	public setType(type: HTMLInputTypeAttribute) {
 		this._type = type;
 	}
 
@@ -23,7 +23,7 @@ export default class TanoshiInputChoiceModel extends TanoshiInputModel {
 		return this._value;
 	}
 
-	set value(value: string) {
+	public setValue(value: string) {
 		this._value = value;
 	}
 
@@ -31,7 +31,7 @@ export default class TanoshiInputChoiceModel extends TanoshiInputModel {
 		return this._checked;
 	}
 
-	set checked(checked: boolean) {
+	public setChecked(checked: boolean) {
 		this._checked = checked;
 	}
 }

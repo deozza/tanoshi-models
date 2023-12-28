@@ -31,7 +31,7 @@ export default class TanoshiLinkModel {
 		return this._href;
 	}
 
-	set href(href: string) {
+	public setHref(href: string) {
 		this._href = href;
 	}
 
@@ -39,7 +39,7 @@ export default class TanoshiLinkModel {
 		return this._label;
 	}
 
-	set label(label: string) {
+	public setLabel(label: string) {
 		this._label = label;
 	}
 
@@ -47,7 +47,7 @@ export default class TanoshiLinkModel {
 		return this._isDisabled;
 	}
 
-	set isDisabled(isDisabled: boolean) {
+	public setIsDisabled(isDisabled: boolean) {
 		this._isDisabled = isDisabled;
 	}
 
@@ -55,7 +55,7 @@ export default class TanoshiLinkModel {
 		return this._target;
 	}
 
-	set target(target: TARGET) {
+	public setTarget(target: TARGET) {
 		this._target = target;
 	}
 
@@ -63,7 +63,7 @@ export default class TanoshiLinkModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | LINK_THEMES) {
+	public setTextTheme(textTheme: THEMES | LINK_THEMES) {
 		this._textTheme = textTheme;
 	}
 
@@ -71,7 +71,7 @@ export default class TanoshiLinkModel {
 		return this._hoverTextTheme;
 	}
 
-	set hoverTextTheme(hoverTextTheme: THEMES | HOVER_LINK_THEMES) {
+	public setHoverTextTheme(hoverTextTheme: THEMES | HOVER_LINK_THEMES) {
 		this._hoverTextTheme = hoverTextTheme;
 	}
 
@@ -79,7 +79,7 @@ export default class TanoshiLinkModel {
 		return this._fontSize;
 	}
 
-	set fontSize(fontSize: FONT_SIZES) {
+	public setFontSize(fontSize: FONT_SIZES) {
 		this._fontSize = fontSize;
 	}
 
@@ -87,7 +87,7 @@ export default class TanoshiLinkModel {
 		return this._fontWeight;
 	}
 
-	set fontWeight(fontWeight: FONT_WEIGHTS) {
+	public setFontWeight(fontWeight: FONT_WEIGHTS) {
 		this._fontWeight = fontWeight;
 	}
 
@@ -95,7 +95,7 @@ export default class TanoshiLinkModel {
 		return this._textAlignment;
 	}
 
-	set textAlignment(textAlignment: TEXT_ALIGNMENT) {
+	public setTextAlignment(textAlignment: TEXT_ALIGNMENT) {
 		this._textAlignment = textAlignment;
 	}
 
@@ -103,7 +103,7 @@ export default class TanoshiLinkModel {
 		return this._textTransform;
 	}
 
-	set textTransform(textTransform: TEXT_TRANSFORMS | null) {
+	public setTextTransform(textTransform: TEXT_TRANSFORMS | null) {
 		this._textTransform = textTransform;
 	}
 
@@ -111,7 +111,7 @@ export default class TanoshiLinkModel {
 		return this._textDecoration;
 	}
 
-	set textDecoration(textDecoration: TEXT_DECORATIONS | null) {
+	public setTextDecoration(textDecoration: TEXT_DECORATIONS | null) {
 		this._textDecoration = textDecoration;
 	}
 }

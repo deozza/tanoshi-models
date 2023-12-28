@@ -2,7 +2,7 @@ import type { HOVER } from '$lib/types/cursor.types.js';
 import type { LOADING_METHODS } from '$lib/types/image.types.js';
 
 export default class TanoshiImageModel {
-	private _content: string;
+	private _src: string;
 	private _alt: string;
 	private _width: number = 0;
 	private _desktopWidth: string | null = null;
@@ -15,24 +15,24 @@ export default class TanoshiImageModel {
 	private _hoverEffectClasses: string | null = null;
 	private _filterClasses: string | null = null;
 
-	constructor(content: string, alt: string) {
-		this._content = content;
+	constructor(src: string, alt: string) {
+		this._src = src;
 		this._alt = alt;
 	}
 
-	get content(): string {
-		return this._content;
+	get src(): string {
+		return this._src;
 	}
 
-	set content(content: string) {
-		this._content = content;
+	public setSrc(src: string) {
+		this._src = src;
 	}
 
 	get alt(): string {
 		return this._alt;
 	}
 
-	set alt(alt: string) {
+	public setAlt(alt: string) {
 		this._alt = alt;
 	}
 
@@ -40,7 +40,7 @@ export default class TanoshiImageModel {
 		return this._width;
 	}
 
-	set width(width: number) {
+	public setWidth(width: number) {
 		this._width = width;
 	}
 
@@ -48,7 +48,7 @@ export default class TanoshiImageModel {
 		return this._desktopWidth;
 	}
 
-	set desktopWidth(desktopWidth: string | null) {
+	public setDesktopWidth(desktopWidth: string | null) {
 		this._desktopWidth = desktopWidth;
 	}
 
@@ -56,7 +56,7 @@ export default class TanoshiImageModel {
 		return this._mobileWidth;
 	}
 
-	set mobileWidth(mobileWidth: string | null) {
+	public setMobileWidth(mobileWidth: string | null) {
 		this._mobileWidth = mobileWidth;
 	}
 
@@ -64,7 +64,7 @@ export default class TanoshiImageModel {
 		return this._height;
 	}
 
-	set height(height: number) {
+	public setHeight(height: number) {
 		this._height = height;
 	}
 
@@ -72,7 +72,7 @@ export default class TanoshiImageModel {
 		return this._desktopHeight;
 	}
 
-	set desktopHeight(desktopHeight: string | null) {
+	public setDesktopHeight(desktopHeight: string | null) {
 		this._desktopHeight = desktopHeight;
 	}
 
@@ -80,7 +80,7 @@ export default class TanoshiImageModel {
 		return this._mobileHeight;
 	}
 
-	set mobileHeight(mobileHeight: string | null) {
+	public setMobileHeight(mobileHeight: string | null) {
 		this._mobileHeight = mobileHeight;
 	}
 
@@ -88,7 +88,7 @@ export default class TanoshiImageModel {
 		return this._loadingMethod;
 	}
 
-	set loadingMethod(loadingMethod: LOADING_METHODS) {
+	public setLoadingMethod(loadingMethod: LOADING_METHODS) {
 		this._loadingMethod = loadingMethod;
 	}
 
@@ -96,7 +96,7 @@ export default class TanoshiImageModel {
 		return this._cursor;
 	}
 
-	set cursor(cursor: HOVER) {
+	public setCursor(cursor: HOVER) {
 		this._cursor = cursor;
 	}
 
@@ -104,7 +104,7 @@ export default class TanoshiImageModel {
 		return this._hoverEffectClasses;
 	}
 
-	set hoverEffectClasses(hoverEffectClasses: string | null) {
+	public setHoverEffectClasses(hoverEffectClasses: string | null) {
 		this._hoverEffectClasses = hoverEffectClasses;
 	}
 
@@ -112,7 +112,7 @@ export default class TanoshiImageModel {
 		return this._filterClasses;
 	}
 
-	set filterClasses(filterClasses: string | null) {
+	public setFilterClasses(filterClasses: string | null) {
 		this._filterClasses = filterClasses;
 	}
 }

@@ -29,7 +29,7 @@ export default class TanoshiInputModel {
 		return this.type;
 	}
 
-	set type(type: HTMLInputTypeAttribute) {
+	public setType(type: HTMLInputTypeAttribute) {
 		this.type = type;
 	}
 
@@ -37,7 +37,7 @@ export default class TanoshiInputModel {
 		return this._id;
 	}
 
-	set id(id: string) {
+	public setId(id: string) {
 		this._id = id;
 	}
 
@@ -45,7 +45,7 @@ export default class TanoshiInputModel {
 		return this._name;
 	}
 
-	set name(name: string) {
+	public setName(name: string) {
 		this._name = name;
 	}
 
@@ -53,7 +53,7 @@ export default class TanoshiInputModel {
 		return this._placeholder;
 	}
 
-	set placeholder(placeholder: string) {
+	public setPlaceholder(placeholder: string) {
 		this._placeholder = placeholder;
 	}
 
@@ -61,7 +61,7 @@ export default class TanoshiInputModel {
 		return this._isDisabled;
 	}
 
-	set isDisabled(isDisabled: boolean) {
+	public setIsDisabled(isDisabled: boolean) {
 		this._isDisabled = isDisabled;
 	}
 
@@ -69,7 +69,7 @@ export default class TanoshiInputModel {
 		return this._isReadonly;
 	}
 
-	set isReadonly(isReadonly: boolean) {
+	public setIsReadonly(isReadonly: boolean) {
 		this._isReadonly = isReadonly;
 	}
 
@@ -77,7 +77,7 @@ export default class TanoshiInputModel {
 		return this._isRequired;
 	}
 
-	set isRequired(isRequired: boolean) {
+	public setIsRequired(isRequired: boolean) {
 		this._isRequired = isRequired;
 	}
 
@@ -85,7 +85,7 @@ export default class TanoshiInputModel {
 		return this._isVisible;
 	}
 
-	set isVisible(isVisible: boolean) {
+	public setIsVisible(isVisible: boolean) {
 		this._isVisible = isVisible;
 	}
 
@@ -93,7 +93,7 @@ export default class TanoshiInputModel {
 		return this._error;
 	}
 
-	set error(error: boolean) {
+	public setError(error: boolean) {
 		this._error = error;
 	}
 
@@ -101,7 +101,7 @@ export default class TanoshiInputModel {
 		return this._errorMessage;
 	}
 
-	set errorMessage(errorMessage: string) {
+	public setErrorMessage(errorMessage: string) {
 		this._errorMessage = errorMessage;
 	}
 
@@ -109,7 +109,7 @@ export default class TanoshiInputModel {
 		return this._backgroundTheme;
 	}
 
-	set backgroundTheme(backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES) {
+	public setBackgroundTheme(backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES) {
 		this._backgroundTheme = backgroundTheme;
 	}
 
@@ -117,7 +117,7 @@ export default class TanoshiInputModel {
 		return this._borderTheme;
 	}
 
-	set borderTheme(borderTheme: THEMES | INPUT_BORDER_THEMES) {
+	public setBorderTheme(borderTheme: THEMES | INPUT_BORDER_THEMES) {
 		this._borderTheme = borderTheme;
 	}
 
@@ -125,7 +125,7 @@ export default class TanoshiInputModel {
 		return this._textTheme;
 	}
 
-	set textTheme(textTheme: THEMES | INPUT_TEXT_THEMES) {
+	public setTextTheme(textTheme: THEMES | INPUT_TEXT_THEMES) {
 		this._textTheme = textTheme;
 	}
 }

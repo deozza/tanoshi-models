@@ -9,7 +9,7 @@ export default class TanoshiInputNumberModel extends TanoshiInputModel {
 		return this._value;
 	}
 
-	set value(value: number | null) {
+	public setValue(value: number | null) {
 		this._value = value;
 	}
 
@@ -17,7 +17,7 @@ export default class TanoshiInputNumberModel extends TanoshiInputModel {
 		return this._min;
 	}
 
-	set min(min: number | null) {
+	public setMin(min: number | null) {
 		this._min = min;
 	}
 
@@ -25,7 +25,7 @@ export default class TanoshiInputNumberModel extends TanoshiInputModel {
 		return this._max;
 	}
 
-	set max(max: number | null) {
+	public setMax(max: number | null) {
 		this._max = max;
 	}
 }
