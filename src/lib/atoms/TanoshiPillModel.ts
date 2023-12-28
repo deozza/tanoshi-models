@@ -1,32 +1,38 @@
-import type { BACKGROUND_THEMES, BORDER_THEMES, TEXT_THEMES } from '$lib/enums/ContainerEnums.js';
 import { THEMES } from '$lib/enums/GlobalEnums.js';
+import type { PILL_BACKGROUND_THEMES, PILL_BORDER_THEMES, PILL_TEXT_THEMES } from '$lib/enums/PillEnums.js';
 
 export default class TanoshiPillModel {
-	private _backgroundTheme: THEMES | BACKGROUND_THEMES = THEMES.Primary;
-	private _borderTheme: THEMES | BORDER_THEMES = THEMES.Primary;
-	private _textTheme: THEMES | TEXT_THEMES = THEMES.White;
+	private _backgroundTheme: THEMES | PILL_BACKGROUND_THEMES = THEMES.Primary;
+	private _borderTheme: THEMES | PILL_BORDER_THEMES = THEMES.Transparent;
+	private _textTheme: THEMES | PILL_TEXT_THEMES = THEMES.White;
 
-	get backgroundTheme(): THEMES | BACKGROUND_THEMES {
+	get backgroundTheme(): THEMES | PILL_BACKGROUND_THEMES {
 		return this._backgroundTheme;
 	}
 
-	public setBackgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
+	public setBackgroundTheme(backgroundTheme: THEMES | PILL_BACKGROUND_THEMES): TanoshiPillModel {
 		this._backgroundTheme = backgroundTheme;
+
+		return this;
 	}
 
-	get borderTheme(): THEMES | BORDER_THEMES {
+	get borderTheme(): THEMES | PILL_BORDER_THEMES {
 		return this._borderTheme;
 	}
 
-	public setBorderTheme(borderTheme: THEMES | BORDER_THEMES) {
+	public setBorderTheme(borderTheme: THEMES | PILL_BORDER_THEMES): TanoshiPillModel {
 		this._borderTheme = borderTheme;
+
+		return this;
 	}
 
-	get textTheme(): THEMES | TEXT_THEMES {
+	get textTheme(): THEMES | PILL_TEXT_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | TEXT_THEMES) {
+	public setTextTheme(textTheme: THEMES | PILL_TEXT_THEMES): TanoshiPillModel {
 		this._textTheme = textTheme;
+
+		return this;
 	}
 }

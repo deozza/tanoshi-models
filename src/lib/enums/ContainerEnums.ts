@@ -1,67 +1,34 @@
-export enum BACKGROUND_THEMES {
-	Primary = 'background-primary',
-	Secondary = 'background-secondary',
-	Success = 'background-success',
-	Warning = 'background-warning',
-	Danger = 'background-danger',
-	Info = 'background-info',
-	Black = 'background-black',
-	White = 'background-white'
+export enum CONTAINER_BACKGROUND_THEMES {
+	Primary = 'container-background-primary',
+	Secondary = 'container-background-secondary',
+	Success = 'container-background-success',
+	Warning = 'container-background-warning',
+	Danger = 'container-background-danger',
+	Info = 'container-background-info',
+	Black = 'container-background-black',
+	White = 'container-background-white'
 }
 
-export enum BORDER_THEMES {
-	Primary = 'border-primary',
-	Secondary = 'border-secondary',
-	Success = 'border-success',
-	Warning = 'border-warning',
-	Danger = 'border-danger',
-	Info = 'border-info',
-	Black = 'border-black',
-	White = 'border-white'
+export enum CONTAINER_BORDER_THEMES {
+	Primary = 'container-border-primary',
+	Secondary = 'container-border-secondary',
+	Success = 'container-border-success',
+	Warning = 'container-border-warning',
+	Danger = 'container-border-danger',
+	Info = 'container-border-info',
+	Black = 'container-border-black',
+	White = 'container-border-white'
 }
 
-export enum TEXT_THEMES {
-	Primary = 'text-primary',
-	Secondary = 'text-secondary',
-	Success = 'text-success',
-	Warning = 'text-warning',
-	Danger = 'text-danger',
-	Info = 'text-info',
-	Black = 'text-black',
-	White = 'text-white'
-}
-
-export enum HOVER_BACKGROUND_THEMES {
-	Primary = 'hover-background-primary',
-	Secondary = 'hover-background-secondary',
-	Success = 'hover-background-success',
-	Warning = 'hover-background-warning',
-	Danger = 'hover-background-danger',
-	Info = 'hover-background-info',
-	Black = 'hover-background-black',
-	White = 'hover-background-white'
-}
-
-export enum HOVER_BORDER_THEMES {
-	Primary = 'hover-border-primary',
-	Secondary = 'hover-border-secondary',
-	Success = 'hover-border-success',
-	Warning = 'hover-border-warning',
-	Danger = 'hover-border-danger',
-	Info = 'hover-border-info',
-	Black = 'hover-border-black',
-	White = 'hover-border-white'
-}
-
-export enum HOVER_TEXT_THEMES {
-	Primary = 'hover-text-primary',
-	Secondary = 'hover-text-secondary',
-	Success = 'hover-text-success',
-	Warning = 'hover-text-warning',
-	Danger = 'hover-text-danger',
-	Info = 'hover-text-info',
-	Black = 'hover-text-black',
-	White = 'hover-text-white'
+export enum CONTAINER_TEXT_THEMES {
+	Primary = 'container-text-primary',
+	Secondary = 'container-text-secondary',
+	Success = 'container-text-success',
+	Warning = 'container-text-warning',
+	Danger = 'container-text-danger',
+	Info = 'container-text-info',
+	Black = 'container-text-black',
+	White = 'container-text-white'
 }
 
 export enum DIRECTIONS {

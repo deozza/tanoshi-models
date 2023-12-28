@@ -15,31 +15,39 @@ export default class TanoshicontentModel {
 		return this._content;
 	}
 
-	public setContent(content: string) {
+	public setContent(content: string): TanoshicontentModel {
 		this._content = content;
+
+		return this;
 	}
 
 	get height(): number {
 		return this._height;
 	}
 
-	public setHeight(height: number) {
+	public setHeight(height: number): TanoshicontentModel {
 		this._height = height;
+
+		return this;
 	}
 
 	get width(): number {
 		return this._width;
 	}
 
-	public setWidth(width: number) {
+	public setWidth(width: number): TanoshicontentModel {
 		this._width = width;
+
+		return this;
 	}
 
 	get theme(): THEMES | ICON_THEMES {
 		return this._theme;
 	}
 
-	public setTheme(theme: THEMES | ICON_THEMES) {
+	public setTheme(theme: THEMES | ICON_THEMES): TanoshicontentModel {
 		this._theme = theme;
+
+		return this;
 	}
 }

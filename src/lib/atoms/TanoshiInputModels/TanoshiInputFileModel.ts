@@ -9,23 +9,29 @@ export default class TanoshiInputFileModel extends TanoshiInputModel {
 		return this._value;
 	}
 
-	public setValue(value: FileList | null) {
+	public setValue(value: FileList | null): TanoshiInputFileModel {
 		this._value = value;
+
+		return this;
 	}
 
 	get multiple(): boolean {
 		return this._multiple;
 	}
 
-	public setMultiple(multiple: boolean) {
+	public setMultiple(multiple: boolean): TanoshiInputFileModel {
 		this._multiple = multiple;
+
+		return this;
 	}
 
 	get accept(): string | null {
 		return this._accept;
 	}
 
-	public setAccept(accept: string | null) {
+	public setAccept(accept: string | null): TanoshiInputFileModel {
 		this._accept = accept;
+
+		return this;
 	}
 }

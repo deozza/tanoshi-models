@@ -1,7 +1,7 @@
 import {
 	type DIRECTIONS,
-	type BACKGROUND_THEMES,
-	type BORDER_THEMES,
+	type CONTAINER_BACKGROUND_THEMES,
+	type CONTAINER_BORDER_THEMES,
 	WRAPS,
 	JUSTIFY_CONTENTS,
 	ALIGN_ITEMS,
@@ -10,8 +10,8 @@ import {
 import { THEMES } from '$lib/enums/GlobalEnums.js';
 
 export default class TanoshiContainerModel {
-	private _backgroundTheme: THEMES | BACKGROUND_THEMES = THEMES.Transparent;
-	private _borderTheme: THEMES | BORDER_THEMES = THEMES.Transparent;
+	private _backgroundTheme: THEMES | CONTAINER_BACKGROUND_THEMES = THEMES.Transparent;
+	private _borderTheme: THEMES | CONTAINER_BORDER_THEMES = THEMES.Transparent;
 	private _desktopDirection: DIRECTIONS;
 	private _mobileDirection: DIRECTIONS;
 	private _wrap: WRAPS = WRAPS.NoWrap;
@@ -28,67 +28,83 @@ export default class TanoshiContainerModel {
 		return this._desktopDirection;
 	}
 
-	public setDesktopDirection(desktopDirection: DIRECTIONS) {
+	public setDesktopDirection(desktopDirection: DIRECTIONS): TanoshiContainerModel {
 		this._desktopDirection = desktopDirection;
+
+		return this;
 	}
 
 	get mobileDirection(): DIRECTIONS {
 		return this._mobileDirection;
 	}
 
-	public setMobileDirection(mobileDirection: DIRECTIONS) {
+	public setMobileDirection(mobileDirection: DIRECTIONS): TanoshiContainerModel {
 		this._mobileDirection = mobileDirection;
+
+		return this;
 	}
 
-	get backgroundTheme(): THEMES | BACKGROUND_THEMES {
+	get backgroundTheme(): THEMES | CONTAINER_BACKGROUND_THEMES {
 		return this._backgroundTheme;
 	}
 
-	public setBackgroundTheme(backgroundTheme: THEMES | BACKGROUND_THEMES) {
+	public setBackgroundTheme(backgroundTheme: THEMES | CONTAINER_BACKGROUND_THEMES): TanoshiContainerModel {
 		this._backgroundTheme = backgroundTheme;
+
+		return this;
 	}
 
-	get borderTheme(): THEMES | BORDER_THEMES {
+	get borderTheme(): THEMES | CONTAINER_BORDER_THEMES {
 		return this._borderTheme;
 	}
 
-	public setBorderTheme(borderTheme: THEMES | BORDER_THEMES) {
+	public setBorderTheme(borderTheme: THEMES | CONTAINER_BORDER_THEMES): TanoshiContainerModel {
 		this._borderTheme = borderTheme;
+
+		return this;
 	}
 
 	get wrap(): WRAPS {
 		return this._wrap;
 	}
 
-	public setWrap(wrap: WRAPS) {
+	public setWrap(wrap: WRAPS): TanoshiContainerModel {
 		this._wrap = wrap;
+
+		return this;
 	}
 
 	get justifyContent(): JUSTIFY_CONTENTS {
 		return this._justifyContent;
 	}
 
-	public setJustifyContent(justifyContent: JUSTIFY_CONTENTS) {
+	public setJustifyContent(justifyContent: JUSTIFY_CONTENTS): TanoshiContainerModel {
 		this._justifyContent = justifyContent;
+
+		return this;
 	}
 
 	get alignItems(): ALIGN_ITEMS {
 		return this._alignItems;
 	}
 
-	public setAlignItems(alignItems: ALIGN_ITEMS) {
+	public setAlignItems(alignItems: ALIGN_ITEMS): TanoshiContainerModel {
 		this._alignItems = alignItems;
+
+		return this;
 	}
 
 	get alignContent(): ALIGN_CONTENTS {
 		return this._alignContent;
 	}
 
-	public setAlignContent(alignContent: ALIGN_CONTENTS) {
+	public setAlignContent(alignContent: ALIGN_CONTENTS): TanoshiContainerModel {
 		if (this._wrap === WRAPS.NoWrap) {
 			throw new Error('Cannot public setalignContent when wrap is public setto NoWrap');
 		}
 
 		this._alignContent = alignContent;
+
+		return this;
 	}
 }

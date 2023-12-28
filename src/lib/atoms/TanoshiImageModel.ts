@@ -24,95 +24,119 @@ export default class TanoshiImageModel {
 		return this._src;
 	}
 
-	public setSrc(src: string) {
+	public setSrc(src: string): TanoshiImageModel {
 		this._src = src;
+
+		return this;
 	}
 
 	get alt(): string {
 		return this._alt;
 	}
 
-	public setAlt(alt: string) {
+	public setAlt(alt: string): TanoshiImageModel {
 		this._alt = alt;
+
+		return this;
 	}
 
 	get width(): number {
 		return this._width;
 	}
 
-	public setWidth(width: number) {
+	public setWidth(width: number): TanoshiImageModel {
 		this._width = width;
+
+		return this;
 	}
 
 	get desktopWidth(): string | null {
 		return this._desktopWidth;
 	}
 
-	public setDesktopWidth(desktopWidth: string | null) {
+	public setDesktopWidth(desktopWidth: string | null): TanoshiImageModel {
 		this._desktopWidth = desktopWidth;
+
+		return this;
 	}
 
 	get mobileWidth(): string | null {
 		return this._mobileWidth;
 	}
 
-	public setMobileWidth(mobileWidth: string | null) {
+	public setMobileWidth(mobileWidth: string | null): TanoshiImageModel {
 		this._mobileWidth = mobileWidth;
+
+		return this;
 	}
 
 	get height(): number {
 		return this._height;
 	}
 
-	public setHeight(height: number) {
+	public setHeight(height: number): TanoshiImageModel {
 		this._height = height;
+
+		return this;
 	}
 
 	get desktopHeight(): string | null {
 		return this._desktopHeight;
 	}
 
-	public setDesktopHeight(desktopHeight: string | null) {
+	public setDesktopHeight(desktopHeight: string | null): TanoshiImageModel {
 		this._desktopHeight = desktopHeight;
+
+		return this;
 	}
 
 	get mobileHeight(): string | null {
 		return this._mobileHeight;
 	}
 
-	public setMobileHeight(mobileHeight: string | null) {
+	public setMobileHeight(mobileHeight: string | null): TanoshiImageModel {
 		this._mobileHeight = mobileHeight;
+
+		return this;
 	}
 
 	get loadingMethod(): LOADING_METHODS {
 		return this._loadingMethod;
 	}
 
-	public setLoadingMethod(loadingMethod: LOADING_METHODS) {
+	public setLoadingMethod(loadingMethod: LOADING_METHODS): TanoshiImageModel {
 		this._loadingMethod = loadingMethod;
+
+		return this;
 	}
 
 	get cursor(): HOVER {
 		return this._cursor;
 	}
 
-	public setCursor(cursor: HOVER) {
+	public setCursor(cursor: HOVER): TanoshiImageModel {
 		this._cursor = cursor;
+
+		return this;
 	}
 
 	get hoverEffectClasses(): string | null {
 		return this._hoverEffectClasses;
 	}
 
-	public setHoverEffectClasses(hoverEffectClasses: string | null) {
+	public setHoverEffectClasses(hoverEffectClasses: string | null): TanoshiImageModel {
 		this._hoverEffectClasses = hoverEffectClasses;
+
+		return this;
 	}
 
 	get filterClasses(): string | null {
 		return this._filterClasses;
 	}
 
-	public setFilterClasses(filterClasses: string | null) {
+	public setFilterClasses(filterClasses: string | null): TanoshiImageModel {
 		this._filterClasses = filterClasses;
+
+		return this;
 	}
 }

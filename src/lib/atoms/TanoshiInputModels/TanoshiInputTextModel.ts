@@ -11,31 +11,39 @@ export default class TanoshiInputTextModel extends TanoshiInputModel {
 		return this._type;
 	}
 
-	public setType(type: HTMLInputTypeAttribute) {
+	public setType(type: HTMLInputTypeAttribute): TanoshiInputTextModel {
 		this._type = type;
+
+		return this;
 	}
 
 	get value(): string | null {
 		return this._value;
 	}
 
-	public setValue(value: string | null) {
+	public setValue(value: string | null): TanoshiInputTextModel {
 		this._value = value;
+
+		return this;
 	}
 
 	get minLength(): number | null {
 		return this._minLength;
 	}
 
-	public setMinLength(minLength: number | null) {
+	public setMinLength(minLength: number | null): TanoshiInputTextModel {
 		this._minLength = minLength;
+
+		return this;
 	}
 
 	get maxLength(): number | null {
 		return this._maxLength;
 	}
 
-	public setMaxLength(maxLength: number | null) {
+	public setMaxLength(maxLength: number | null): TanoshiInputTextModel {
 		this._maxLength = maxLength;
+
+		return this;
 	}
 }

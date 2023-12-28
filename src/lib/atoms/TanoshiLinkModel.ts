@@ -3,11 +3,10 @@ import {
 	FONT_SIZES,
 	TEXT_ALIGNMENT,
 	FONT_WEIGHTS,
-	type HOVER_LINK_THEMES,
-	type LINK_THEMES,
 	type TEXT_DECORATIONS,
 	type TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
+import type { HOVER_LINK_THEMES, LINK_THEMES } from '$lib/enums/LinkEnums.js';
 import type { TARGET } from '$lib/types/link.types.js';
 
 export default class TanoshiLinkModel {
@@ -31,87 +30,109 @@ export default class TanoshiLinkModel {
 		return this._href;
 	}
 
-	public setHref(href: string) {
+	public setHref(href: string): TanoshiLinkModel {
 		this._href = href;
+
+		return this;
 	}
 
 	get label(): string {
 		return this._label;
 	}
 
-	public setLabel(label: string) {
+	public setLabel(label: string): TanoshiLinkModel {
 		this._label = label;
+
+		return this;
 	}
 
 	get isDisabled(): boolean {
 		return this._isDisabled;
 	}
 
-	public setIsDisabled(isDisabled: boolean) {
+	public setIsDisabled(isDisabled: boolean): TanoshiLinkModel {
 		this._isDisabled = isDisabled;
+
+		return this;
 	}
 
 	get target(): TARGET {
 		return this._target;
 	}
 
-	public setTarget(target: TARGET) {
+	public setTarget(target: TARGET): TanoshiLinkModel {
 		this._target = target;
+
+		return this;
 	}
 
 	get textTheme(): THEMES | LINK_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | LINK_THEMES) {
+	public setTextTheme(textTheme: THEMES | LINK_THEMES): TanoshiLinkModel {
 		this._textTheme = textTheme;
+
+		return this;
 	}
 
 	get hoverTextTheme(): THEMES | HOVER_LINK_THEMES {
 		return this._hoverTextTheme;
 	}
 
-	public setHoverTextTheme(hoverTextTheme: THEMES | HOVER_LINK_THEMES) {
+	public setHoverTextTheme(hoverTextTheme: THEMES | HOVER_LINK_THEMES): TanoshiLinkModel {
 		this._hoverTextTheme = hoverTextTheme;
+
+		return this;
 	}
 
 	get fontSize(): FONT_SIZES {
 		return this._fontSize;
 	}
 
-	public setFontSize(fontSize: FONT_SIZES) {
+	public setFontSize(fontSize: FONT_SIZES): TanoshiLinkModel {
 		this._fontSize = fontSize;
+
+		return this;
 	}
 
 	get fontWeight(): FONT_WEIGHTS {
 		return this._fontWeight;
 	}
 
-	public setFontWeight(fontWeight: FONT_WEIGHTS) {
+	public setFontWeight(fontWeight: FONT_WEIGHTS): TanoshiLinkModel {
 		this._fontWeight = fontWeight;
+
+		return this;
 	}
 
 	get textAlignment(): TEXT_ALIGNMENT {
 		return this._textAlignment;
 	}
 
-	public setTextAlignment(textAlignment: TEXT_ALIGNMENT) {
+	public setTextAlignment(textAlignment: TEXT_ALIGNMENT): TanoshiLinkModel {
 		this._textAlignment = textAlignment;
+
+		return this;
 	}
 
 	get textTransform(): TEXT_TRANSFORMS | null {
 		return this._textTransform;
 	}
 
-	public setTextTransform(textTransform: TEXT_TRANSFORMS | null) {
+	public setTextTransform(textTransform: TEXT_TRANSFORMS | null): TanoshiLinkModel {
 		this._textTransform = textTransform;
+
+		return this;
 	}
 
 	get textDecoration(): TEXT_DECORATIONS | null {
 		return this._textDecoration;
 	}
 
-	public setTextDecoration(textDecoration: TEXT_DECORATIONS | null) {
+	public setTextDecoration(textDecoration: TEXT_DECORATIONS | null): TanoshiLinkModel {
 		this._textDecoration = textDecoration;
+
+		return this;
 	}
 }

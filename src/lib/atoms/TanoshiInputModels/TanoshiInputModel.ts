@@ -25,20 +25,14 @@ export default class TanoshiInputModel {
 		this._name = name;
 	}
 
-	get type(): HTMLInputTypeAttribute {
-		return this.type;
-	}
-
-	public setType(type: HTMLInputTypeAttribute) {
-		this.type = type;
-	}
-
 	get id(): string {
 		return this._id;
 	}
 
 	public setId(id: string) {
 		this._id = id;
+
+		return this;
 	}
 
 	get name(): string {
@@ -47,6 +41,8 @@ export default class TanoshiInputModel {
 
 	public setName(name: string) {
 		this._name = name;
+
+		return this;
 	}
 
 	get placeholder(): string | null {
@@ -55,6 +51,8 @@ export default class TanoshiInputModel {
 
 	public setPlaceholder(placeholder: string) {
 		this._placeholder = placeholder;
+
+		return this;
 	}
 
 	get isDisabled(): boolean {
@@ -63,6 +61,8 @@ export default class TanoshiInputModel {
 
 	public setIsDisabled(isDisabled: boolean) {
 		this._isDisabled = isDisabled;
+
+		return this;
 	}
 
 	get isReadonly(): boolean {
@@ -71,6 +71,8 @@ export default class TanoshiInputModel {
 
 	public setIsReadonly(isReadonly: boolean) {
 		this._isReadonly = isReadonly;
+
+		return this;
 	}
 
 	get isRequired(): boolean {
@@ -79,6 +81,8 @@ export default class TanoshiInputModel {
 
 	public setIsRequired(isRequired: boolean) {
 		this._isRequired = isRequired;
+
+		return this;
 	}
 
 	get isVisible(): boolean {
@@ -87,6 +91,8 @@ export default class TanoshiInputModel {
 
 	public setIsVisible(isVisible: boolean) {
 		this._isVisible = isVisible;
+
+		return this;
 	}
 
 	get error(): boolean {
@@ -95,6 +101,8 @@ export default class TanoshiInputModel {
 
 	public setError(error: boolean) {
 		this._error = error;
+
+		return this;
 	}
 
 	get errorMessage(): string {
@@ -103,6 +111,8 @@ export default class TanoshiInputModel {
 
 	public setErrorMessage(errorMessage: string) {
 		this._errorMessage = errorMessage;
+
+		return this;
 	}
 
 	get backgroundTheme(): THEMES | INPUT_BACKGROUND_THEMES {
@@ -111,6 +121,8 @@ export default class TanoshiInputModel {
 
 	public setBackgroundTheme(backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES) {
 		this._backgroundTheme = backgroundTheme;
+
+		return this;
 	}
 
 	get borderTheme(): THEMES | INPUT_BORDER_THEMES {
@@ -119,6 +131,8 @@ export default class TanoshiInputModel {
 
 	public setBorderTheme(borderTheme: THEMES | INPUT_BORDER_THEMES) {
 		this._borderTheme = borderTheme;
+
+		return this;
 	}
 
 	get textTheme(): THEMES | INPUT_TEXT_THEMES {
@@ -127,5 +141,7 @@ export default class TanoshiInputModel {
 
 	public setTextTheme(textTheme: THEMES | INPUT_TEXT_THEMES) {
 		this._textTheme = textTheme;
+
+		return this;
 	}
 }
