@@ -13,7 +13,7 @@ import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterfac
 export default class TanoshiButtonModel implements ComponentModelInterface {
 	private _label: string = '';
 	private _type: BUTTON_TYPES = 'button';
-	private _backgroundTheme: THEMES | BUTTON_BACKGROUND_THEMES = THEMES.Primary;
+	private _backgroundTheme: THEMES | BUTTON_BACKGROUND_THEMES = THEMES.Transparent;
 	private _borderTheme: THEMES | BUTTON_BORDER_THEMES = THEMES.Transparent;
 	private _textTheme: THEMES | BUTTON_TEXT_THEMES = THEMES.White;
 	private _hoverBackgroundTheme: THEMES | BUTTON_HOVER_BACKGROUND_THEMES = THEMES.Primary;
@@ -121,11 +121,11 @@ export default class TanoshiButtonModel implements ComponentModelInterface {
 		let classes: string = 'tanoshi-button';
 
 		classes += ` text-theme-${this._textTheme}`;
-		classes += ` bg-theme-${this._backgroundTheme}`;
-		classes += ` bd-theme-${this._borderTheme}`;
-		classes += ` hover:bg-theme-${this._hoverBackgroundTheme}`;
-		classes += ` hover:bd-theme-${this._hoverBorderTheme}`;
 		classes += ` hover:text-theme-${this._hoverTextTheme}`;
+		classes += ` bg-theme-${this._backgroundTheme}`;
+		classes += ` hover:bg-theme-${this._hoverBackgroundTheme}`;
+		classes += ` bd-theme-${this._borderTheme}`;
+		classes += ` hover:bd-theme-${this._hoverBorderTheme}`;
 
 		return classes;
 	}

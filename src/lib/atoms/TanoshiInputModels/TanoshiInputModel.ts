@@ -16,11 +16,20 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	private _isVisible: boolean = true;
 	private _error: boolean = false;
 	private _errorMessage: string = '';
-	private _backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES = THEMES.Transparent;
+	private _backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES = THEMES.White;
 	private _borderTheme: THEMES | INPUT_BORDER_THEMES = THEMES.Black;
 	private _textTheme: THEMES | INPUT_TEXT_THEMES = THEMES.Black;
 
 	constructor(id: string, name: string) {
+
+		if(id === '') {
+			throw new Error('Input id cannot be empty');
+		}
+
+		if(name === '') {
+			throw new Error('Input name cannot be empty');
+		}
+
 		this._id = id;
 		this._name = name;
 	}
@@ -30,6 +39,10 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	}
 
 	public setId(id: string) {
+		if(id === '') {
+			throw new Error('Input id cannot be empty');
+		}
+
 		this._id = id;
 
 		return this;
@@ -40,6 +53,10 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	}
 
 	public setName(name: string) {
+		if(name === '') {
+			throw new Error('Input name cannot be empty');
+		}
+		
 		this._name = name;
 
 		return this;
@@ -154,9 +171,9 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 			return classes;
 		}
 
+		classes += ` text-theme-${this._textTheme}`;
 		classes += ` bg-theme-${this._backgroundTheme}`;
 		classes += ` bd-theme-${this._borderTheme}`;
-		classes += ` text-theme-${this._textTheme}`;
 
 		if (this._isDisabled) {
 			classes += ' disabled';

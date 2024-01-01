@@ -10,23 +10,23 @@ export enum PILL_TEXT_THEMES {
 }
 
 export enum PILL_BACKGROUND_THEMES {
-	Primary = 'pill-background-primary',
-	Secondary = 'pill-background-secondary',
-	Success = 'pill-background-success',
-	Warning = 'pill-background-warning',
-	Danger = 'pill-background-danger',
-	Info = 'pill-background-info',
-	Black = 'pill-background-black',
-	White = 'pill-background-white'
+	Primary = 'pill-bg-primary',
+	Secondary = 'pill-bg-secondary',
+	Success = 'pill-bg-success',
+	Warning = 'pill-bg-warning',
+	Danger = 'pill-bg-danger',
+	Info = 'pill-bg-info',
+	Black = 'pill-bg-black',
+	White = 'pill-bg-white'
 }
 
 export enum PILL_BORDER_THEMES {
-	Primary = 'pill-border-primary',
-	Secondary = 'pill-border-secondary',
-	Success = 'pill-border-success',
-	Warning = 'pill-border-warning',
-	Danger = 'pill-border-danger',
-	Info = 'pill-border-info',
-	Black = 'pill-border-black',
-	White = 'pill-border-white'
+	Primary = 'pill-bd-primary',
+	Secondary = 'pill-bd-secondary',
+	Success = 'pill-bd-success',
+	Warning = 'pill-bd-warning',
+	Danger = 'pill-bd-danger',
+	Info = 'pill-bd-info',
+	Black = 'pill-bd-black',
+	White = 'pill-bd-white'
 }

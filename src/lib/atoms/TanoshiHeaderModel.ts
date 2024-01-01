@@ -7,7 +7,7 @@ import {
 	TEXT_DECORATIONS,
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
-import type { HEADER_THEMES } from '$lib/enums/HeaderEnums.js';
+import type { HEADER_TEXT_THEMES } from '$lib/enums/HeaderEnums.js';
 import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
 export default class TanoshiHeaderModel implements ComponentModelInterface {
@@ -17,7 +17,7 @@ export default class TanoshiHeaderModel implements ComponentModelInterface {
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
 	private _textTransform: TEXT_TRANSFORMS | null = null;
 	private _textDecoration: TEXT_DECORATIONS | null = null;
-	private _textTheme: THEMES | HEADER_THEMES = THEMES.Black;
+	private _textTheme: THEMES | HEADER_TEXT_THEMES = THEMES.Black;
 
 	get tag(): HEADER_TAGS {
 		return this._tag;
@@ -79,11 +79,11 @@ export default class TanoshiHeaderModel implements ComponentModelInterface {
 		return this;
 	}
 
-	get textTheme(): THEMES | HEADER_THEMES {
+	get textTheme(): THEMES | HEADER_TEXT_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | HEADER_THEMES): TanoshiHeaderModel {
+	public setTextTheme(textTheme: THEMES | HEADER_TEXT_THEMES): TanoshiHeaderModel {
 		this._textTheme = textTheme;
 
 		return this;

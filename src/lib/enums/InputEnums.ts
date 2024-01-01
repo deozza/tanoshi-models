@@ -1,23 +1,23 @@
 export enum INPUT_BACKGROUND_THEMES {
-	Primary = 'input-background-primary',
-	Secondary = 'input-background-secondary',
-	Success = 'input-background-success',
-	Warning = 'input-background-warning',
-	Danger = 'input-background-danger',
-	Info = 'input-background-info',
-	Black = 'input-background-black',
-	White = 'input-background-white'
+	Primary = 'input-bg-primary',
+	Secondary = 'input-bg-secondary',
+	Success = 'input-bg-success',
+	Warning = 'input-bg-warning',
+	Danger = 'input-bg-danger',
+	Info = 'input-bg-info',
+	Black = 'input-bg-black',
+	White = 'input-bg-white'
 }
 
 export enum INPUT_BORDER_THEMES {
-	Primary = 'input-border-primary',
-	Secondary = 'input-border-secondary',
-	Success = 'input-border-success',
-	Warning = 'input-border-warning',
-	Danger = 'input-border-danger',
-	Info = 'input-border-info',
-	Black = 'input-border-black',
-	White = 'input-border-white'
+	Primary = 'input-bd-primary',
+	Secondary = 'input-bd-secondary',
+	Success = 'input-bd-success',
+	Warning = 'input-bd-warning',
+	Danger = 'input-bd-danger',
+	Info = 'input-bd-info',
+	Black = 'input-bd-black',
+	White = 'input-bd-white'
 }
 
 export enum INPUT_TEXT_THEMES {

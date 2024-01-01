@@ -17,6 +17,15 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	private _filterClasses: string | null = null;
 
 	constructor(src: string, alt: string) {
+
+		if(src === '') {
+			throw new Error('Image src cannot be empty');
+		}
+
+		if(alt === '') {
+			throw new Error('Image alt cannot be empty');
+		}
+
 		this._src = src;
 		this._alt = alt;
 	}
@@ -26,6 +35,10 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	public setSrc(src: string): TanoshiImageModel {
+		if(src === '') {
+			throw new Error('Image src cannot be empty');
+		}
+		
 		this._src = src;
 
 		return this;
@@ -36,6 +49,10 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	public setAlt(alt: string): TanoshiImageModel {
+		if(alt === '') {
+			throw new Error('Image alt cannot be empty');
+		}
+		
 		this._alt = alt;
 
 		return this;

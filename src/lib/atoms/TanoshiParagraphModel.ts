@@ -6,7 +6,7 @@ import {
 	TEXT_DECORATIONS,
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
-import type { PARAGRAPH_THEMES } from '$lib/enums/ParagraphEnums.js';
+import type { PARAGRAPH_TEXT_THEMES } from '$lib/enums/ParagraphEnums.js';
 import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
 export default class TanoshiParagraphModel implements ComponentModelInterface {
@@ -15,7 +15,7 @@ export default class TanoshiParagraphModel implements ComponentModelInterface {
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
 	private _textTransform: TEXT_TRANSFORMS | null = null;
 	private _textDecoration: TEXT_DECORATIONS | null = null;
-	private _textTheme: THEMES | PARAGRAPH_THEMES = THEMES.Black;
+	private _textTheme: THEMES | PARAGRAPH_TEXT_THEMES = THEMES.Black;
 
 	get fontSize(): FONT_SIZES {
 		return this._fontSize;
@@ -67,11 +67,11 @@ export default class TanoshiParagraphModel implements ComponentModelInterface {
 		return this;
 	}
 
-	get textTheme(): THEMES | PARAGRAPH_THEMES {
+	get textTheme(): THEMES | PARAGRAPH_TEXT_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | PARAGRAPH_THEMES): TanoshiParagraphModel {
+	public setTextTheme(textTheme: THEMES | PARAGRAPH_TEXT_THEMES): TanoshiParagraphModel {
 		this._textTheme = textTheme;
 
 		return this;

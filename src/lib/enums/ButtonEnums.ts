@@ -21,45 +21,45 @@ export enum BUTTON_HOVER_TEXT_THEMES {
 }
 
 export enum BUTTON_BACKGROUND_THEMES {
-	Primary = 'button-background-primary',
-	Secondary = 'button-background-secondary',
-	Success = 'button-background-success',
-	Warning = 'button-background-warning',
-	Danger = 'button-background-danger',
-	Info = 'button-background-info',
-	Black = 'button-background-black',
-	White = 'button-background-white'
+	Primary = 'button-bg-primary',
+	Secondary = 'button-bg-secondary',
+	Success = 'button-bg-success',
+	Warning = 'button-bg-warning',
+	Danger = 'button-bg-danger',
+	Info = 'button-bg-info',
+	Black = 'button-bg-black',
+	White = 'button-bg-white'
 }
 
 export enum BUTTON_HOVER_BACKGROUND_THEMES {
-	Primary = 'button-hover-background-primary',
-	Secondary = 'button-hover-background-secondary',
-	Success = 'button-hover-background-success',
-	Warning = 'button-hover-background-warning',
-	Danger = 'button-hover-background-danger',
-	Info = 'button-hover-background-info',
-	Black = 'button-hover-background-black',
-	White = 'button-hover-background-white'
+	Primary = 'button-hover-bg-primary',
+	Secondary = 'button-hover-bg-secondary',
+	Success = 'button-hover-bg-success',
+	Warning = 'button-hover-bg-warning',
+	Danger = 'button-hover-bg-danger',
+	Info = 'button-hover-bg-info',
+	Black = 'button-hover-bg-black',
+	White = 'button-hover-bg-white'
 }
 
 export enum BUTTON_BORDER_THEMES {
-	Primary = 'button-border-primary',
-	Secondary = 'button-border-secondary',
-	Success = 'button-border-success',
-	Warning = 'button-border-warning',
-	Danger = 'button-border-danger',
-	Info = 'button-border-info',
-	Black = 'button-border-black',
-	White = 'button-border-white'
+	Primary = 'button-bd-primary',
+	Secondary = 'button-bd-secondary',
+	Success = 'button-bd-success',
+	Warning = 'button-bd-warning',
+	Danger = 'button-bd-danger',
+	Info = 'button-bd-info',
+	Black = 'button-bd-black',
+	White = 'button-bd-white'
 }
 
 export enum BUTTON_HOVER_BORDER_THEMES {
-	Primary = 'button-hover-border-primary',
-	Secondary = 'button-hover-border-secondary',
-	Success = 'button-hover-border-success',
-	Warning = 'button-hover-border-warning',
-	Danger = 'button-hover-border-danger',
-	Info = 'button-hover-border-info',
-	Black = 'button-hover-border-black',
-	White = 'button-hover-border-white'
+	Primary = 'button-hover-bd-primary',
+	Secondary = 'button-hover-bd-secondary',
+	Success = 'button-hover-bd-success',
+	Warning = 'button-hover-bd-warning',
+	Danger = 'button-hover-bd-danger',
+	Info = 'button-hover-bd-info',
+	Black = 'button-hover-bd-black',
+	White = 'button-hover-bd-white'
 }

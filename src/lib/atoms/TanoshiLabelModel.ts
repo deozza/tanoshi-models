@@ -6,13 +6,13 @@ import {
 	TEXT_DECORATIONS,
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
-import type { LABEL_THEMES } from '$lib/enums/LabelEnums.js';
+import type { LABEL_TEXT_THEMES } from '$lib/enums/LabelEnums.js';
 import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
 export default class TanoshiLabelModel implements ComponentModelInterface {
 	private _content: string = '';
 	private _forAttr: string;
-	private _textTheme: THEMES | LABEL_THEMES = THEMES.Primary;
+	private _textTheme: THEMES | LABEL_TEXT_THEMES = THEMES.Primary;
 	private _fontSize: FONT_SIZES = FONT_SIZES.Md;
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
@@ -44,11 +44,11 @@ export default class TanoshiLabelModel implements ComponentModelInterface {
 		return this;
 	}
 
-	get textTheme(): THEMES | LABEL_THEMES {
+	get textTheme(): THEMES | LABEL_TEXT_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | LABEL_THEMES): TanoshiLabelModel {
+	public setTextTheme(textTheme: THEMES | LABEL_TEXT_THEMES): TanoshiLabelModel {
 		this._textTheme = textTheme;
 
 		return this;
@@ -126,8 +126,8 @@ export default class TanoshiLabelModel implements ComponentModelInterface {
 
 		classes += ` text-theme-${this._textTheme}`;
 		classes += ` font-size-${this._fontSize}`;
-		classes += ` font-weight-${this._fontWeight}`;
 		classes += ` text-align-${this._textAlignment}`;
+		classes += ` font-weight-${this._fontWeight}`;
 
 		if (this._textTransform) {
 			classes += ` text-transform-${this._textTransform}`;

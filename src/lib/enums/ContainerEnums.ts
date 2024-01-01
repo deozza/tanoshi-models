@@ -1,23 +1,23 @@
 export enum CONTAINER_BACKGROUND_THEMES {
-	Primary = 'container-background-primary',
-	Secondary = 'container-background-secondary',
-	Success = 'container-background-success',
-	Warning = 'container-background-warning',
-	Danger = 'container-background-danger',
-	Info = 'container-background-info',
-	Black = 'container-background-black',
-	White = 'container-background-white'
+	Primary = 'container-bg-primary',
+	Secondary = 'container-bg-secondary',
+	Success = 'container-bg-success',
+	Warning = 'container-bg-warning',
+	Danger = 'container-bg-danger',
+	Info = 'container-bg-info',
+	Black = 'container-bg-black',
+	White = 'container-bg-white'
 }
 
 export enum CONTAINER_BORDER_THEMES {
-	Primary = 'container-border-primary',
-	Secondary = 'container-border-secondary',
-	Success = 'container-border-success',
-	Warning = 'container-border-warning',
-	Danger = 'container-border-danger',
-	Info = 'container-border-info',
-	Black = 'container-border-black',
-	White = 'container-border-white'
+	Primary = 'container-bd-primary',
+	Secondary = 'container-bd-secondary',
+	Success = 'container-bd-success',
+	Warning = 'container-bd-warning',
+	Danger = 'container-bd-danger',
+	Info = 'container-bd-info',
+	Black = 'container-bd-black',
+	White = 'container-bd-white'
 }
 
 export enum CONTAINER_TEXT_THEMES {

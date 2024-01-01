@@ -6,7 +6,7 @@ import {
 	type TEXT_DECORATIONS,
 	type TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
-import type { LINK_HOVER_THEMES, LINK_THEMES } from '$lib/enums/LinkEnums.js';
+import type { LINK_HOVER_TEXT_THEMES, LINK_TEXT_THEMES } from '$lib/enums/LinkEnums.js';
 import type { TARGET } from '$lib/types/link.types.js';
 import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
@@ -15,8 +15,8 @@ export default class TanoshiLinkModel implements ComponentModelInterface {
 	private _label: string = '';
 	private _isDisabled: boolean = false;
 	private _target: TARGET = '_self';
-	private _textTheme: THEMES | LINK_THEMES = THEMES.Primary;
-	private _hoverTextTheme: THEMES | LINK_HOVER_THEMES = THEMES.Primary;
+	private _textTheme: THEMES | LINK_TEXT_THEMES = THEMES.Black;
+	private _hoverTextTheme: THEMES | LINK_HOVER_TEXT_THEMES = THEMES.Black;
 	private _fontSize: FONT_SIZES = FONT_SIZES.Md;
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
@@ -67,21 +67,21 @@ export default class TanoshiLinkModel implements ComponentModelInterface {
 		return this;
 	}
 
-	get textTheme(): THEMES | LINK_THEMES {
+	get textTheme(): THEMES | LINK_TEXT_THEMES {
 		return this._textTheme;
 	}
 
-	public setTextTheme(textTheme: THEMES | LINK_THEMES): TanoshiLinkModel {
+	public setTextTheme(textTheme: THEMES | LINK_TEXT_THEMES): TanoshiLinkModel {
 		this._textTheme = textTheme;
 
 		return this;
 	}
 
-	get hoverTextTheme(): THEMES | LINK_HOVER_THEMES {
+	get hoverTextTheme(): THEMES | LINK_HOVER_TEXT_THEMES {
 		return this._hoverTextTheme;
 	}
 
-	public setHoverTextTheme(hoverTextTheme: THEMES | LINK_HOVER_THEMES): TanoshiLinkModel {
+	public setHoverTextTheme(hoverTextTheme: THEMES | LINK_HOVER_TEXT_THEMES): TanoshiLinkModel {
 		this._hoverTextTheme = hoverTextTheme;
 
 		return this;
@@ -143,8 +143,8 @@ export default class TanoshiLinkModel implements ComponentModelInterface {
 		classes += ` text-theme-${this._textTheme}`;
 		classes += ` hover:text-theme-${this._hoverTextTheme}`;
 		classes += ` font-size-${this._fontSize}`;
-		classes += ` font-weight-${this._fontWeight}`;
 		classes += ` text-align-${this._textAlignment}`;
+		classes += ` font-weight-${this._fontWeight}`;
 
 		if (this._textTransform) {
 			classes += ` text-transform-${this._textTransform}`;
