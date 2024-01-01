@@ -21,12 +21,11 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	private _textTheme: THEMES | INPUT_TEXT_THEMES = THEMES.Black;
 
 	constructor(id: string, name: string) {
-
-		if(id === '') {
+		if (id === '') {
 			throw new Error('Input id cannot be empty');
 		}
 
-		if(name === '') {
+		if (name === '') {
 			throw new Error('Input name cannot be empty');
 		}
 
@@ -39,7 +38,7 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	}
 
 	public setId(id: string) {
-		if(id === '') {
+		if (id === '') {
 			throw new Error('Input id cannot be empty');
 		}
 
@@ -53,10 +52,10 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	}
 
 	public setName(name: string) {
-		if(name === '') {
+		if (name === '') {
 			throw new Error('Input name cannot be empty');
 		}
-		
+
 		this._name = name;
 
 		return this;
@@ -165,7 +164,7 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	public getClasses(): string {
 		let classes: string = 'tanoshi-input';
 
-		if(this._isVisible === false) {
+		if (this._isVisible === false) {
 			classes += ' hidden';
 
 			return classes;
@@ -184,6 +183,5 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 		}
 
 		return classes;
-		
 	}
 }

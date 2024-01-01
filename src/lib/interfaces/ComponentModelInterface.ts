@@ -1,7 +1,6 @@
 export default interface ComponentModelInterface {
-    
-    /**
-     * getClasses
-     */
-    getClasses(): string;
+	/**
+	 * getClasses
+	 */
+	getClasses(): string;
 }

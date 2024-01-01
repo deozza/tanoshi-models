@@ -85,11 +85,11 @@ export default class TanoshiParagraphModel implements ComponentModelInterface {
 		classes += ` text-align-${this._textAlignment}`;
 		classes += ` font-weight-${this._fontWeight}`;
 
-		if(this._textTransform !== null) {
+		if (this._textTransform !== null) {
 			classes += ` text-transform-${this._textTransform}`;
 		}
 
-		if(this._textDecoration !== null) {
+		if (this._textDecoration !== null) {
 			classes += ` text-decoration-${this._textDecoration}`;
 		}
 

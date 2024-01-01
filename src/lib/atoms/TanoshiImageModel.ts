@@ -17,12 +17,11 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	private _filterClasses: string | null = null;
 
 	constructor(src: string, alt: string) {
-
-		if(src === '') {
+		if (src === '') {
 			throw new Error('Image src cannot be empty');
 		}
 
-		if(alt === '') {
+		if (alt === '') {
 			throw new Error('Image alt cannot be empty');
 		}
 
@@ -35,10 +34,10 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	public setSrc(src: string): TanoshiImageModel {
-		if(src === '') {
+		if (src === '') {
 			throw new Error('Image src cannot be empty');
 		}
-		
+
 		this._src = src;
 
 		return this;
@@ -49,10 +48,10 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	public setAlt(alt: string): TanoshiImageModel {
-		if(alt === '') {
+		if (alt === '') {
 			throw new Error('Image alt cannot be empty');
 		}
-		
+
 		this._alt = alt;
 
 		return this;
@@ -69,8 +68,7 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	get desktopWidth(): string | null {
-
-		if(this._desktopWidth === null) {
+		if (this._desktopWidth === null) {
 			return `${this._width}px`;
 		}
 
@@ -84,7 +82,7 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	get mobileWidth(): string | null {
-		if(this._mobileWidth === null) {
+		if (this._mobileWidth === null) {
 			return `${this._width}px`;
 		}
 
@@ -108,7 +106,7 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	get desktopHeight(): string | null {
-		if(this._desktopHeight === null) {
+		if (this._desktopHeight === null) {
 			return `${this._height}px`;
 		}
 
@@ -122,7 +120,7 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 	}
 
 	get mobileHeight(): string | null {
-		if(this._mobileHeight === null) {
+		if (this._mobileHeight === null) {
 			return `${this._height}px`;
 		}
 
@@ -180,14 +178,13 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 
 		classes += ` cursor-${this._cursor}`;
 
-		if(this._hoverEffectClasses !== null) {
+		if (this._hoverEffectClasses !== null) {
 			classes += ` hover:${this._hoverEffectClasses}`;
 		}
 
-		if(this._filterClasses !== null) {
+		if (this._filterClasses !== null) {
 			classes += ` filter-${this._filterClasses}`;
 		}
-		
 
 		return classes;
 	}

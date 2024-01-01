@@ -117,8 +117,7 @@ export default class TanoshiLabelModel implements ComponentModelInterface {
 	public getClasses(): string {
 		let classes: string = 'tanoshi-label';
 
-
-		if(this._isVisible === false) {
+		if (this._isVisible === false) {
 			classes += ' hidden';
 
 			return classes;
