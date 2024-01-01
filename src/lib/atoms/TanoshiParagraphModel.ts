@@ -7,8 +7,9 @@ import {
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
 import type { PARAGRAPH_THEMES } from '$lib/enums/ParagraphEnums.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiParagraphModel {
+export default class TanoshiParagraphModel implements ComponentModelInterface {
 	private _fontSize: FONT_SIZES = FONT_SIZES.Md;
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
@@ -74,5 +75,24 @@ export default class TanoshiParagraphModel {
 		this._textTheme = textTheme;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-paragraph';
+
+		classes += ` text-theme-${this._textTheme}`;
+		classes += ` font-size-${this._fontSize}`;
+		classes += ` text-align-${this._textAlignment}`;
+		classes += ` font-weight-${this._fontWeight}`;
+
+		if(this._textTransform !== null) {
+			classes += ` text-transform-${this._textTransform}`;
+		}
+
+		if(this._textDecoration !== null) {
+			classes += ` text-decoration-${this._textDecoration}`;
+		}
+
+		return classes;
 	}
 }

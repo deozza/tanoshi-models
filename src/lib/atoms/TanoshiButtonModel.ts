@@ -8,8 +8,9 @@ import type {
 	BUTTON_TEXT_THEMES
 } from '$lib/enums/ButtonEnums.js';
 import type { BUTTON_TYPES } from '$lib/types/button.types.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiButtonModel {
+export default class TanoshiButtonModel implements ComponentModelInterface {
 	private _label: string = '';
 	private _type: BUTTON_TYPES = 'button';
 	private _backgroundTheme: THEMES | BUTTON_BACKGROUND_THEMES = THEMES.Primary;
@@ -114,5 +115,18 @@ export default class TanoshiButtonModel {
 		this._isDisabled = isDisabled;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-button';
+
+		classes += ` text-theme-${this._textTheme}`;
+		classes += ` bg-theme-${this._backgroundTheme}`;
+		classes += ` bd-theme-${this._borderTheme}`;
+		classes += ` hover:bg-theme-${this._hoverBackgroundTheme}`;
+		classes += ` hover:bd-theme-${this._hoverBorderTheme}`;
+		classes += ` hover:text-theme-${this._hoverTextTheme}`;
+
+		return classes;
 	}
 }

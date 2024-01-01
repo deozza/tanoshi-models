@@ -1,7 +1,8 @@
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 import type { HOVER } from '$lib/types/cursor.types.js';
 import type { LOADING_METHODS } from '$lib/types/image.types.js';
 
-export default class TanoshiImageModel {
+export default class TanoshiImageModel implements ComponentModelInterface {
 	private _src: string;
 	private _alt: string;
 	private _width: number = 0;
@@ -51,6 +52,11 @@ export default class TanoshiImageModel {
 	}
 
 	get desktopWidth(): string | null {
+
+		if(this._desktopWidth === null) {
+			return `${this._width}px`;
+		}
+
 		return this._desktopWidth;
 	}
 
@@ -61,6 +67,10 @@ export default class TanoshiImageModel {
 	}
 
 	get mobileWidth(): string | null {
+		if(this._mobileWidth === null) {
+			return `${this._width}px`;
+		}
+
 		return this._mobileWidth;
 	}
 
@@ -81,6 +91,10 @@ export default class TanoshiImageModel {
 	}
 
 	get desktopHeight(): string | null {
+		if(this._desktopHeight === null) {
+			return `${this._height}px`;
+		}
+
 		return this._desktopHeight;
 	}
 
@@ -91,6 +105,10 @@ export default class TanoshiImageModel {
 	}
 
 	get mobileHeight(): string | null {
+		if(this._mobileHeight === null) {
+			return `${this._height}px`;
+		}
+
 		return this._mobileHeight;
 	}
 
@@ -138,5 +156,22 @@ export default class TanoshiImageModel {
 		this._filterClasses = filterClasses;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-image';
+
+		classes += ` cursor-${this._cursor}`;
+
+		if(this._hoverEffectClasses !== null) {
+			classes += ` hover:${this._hoverEffectClasses}`;
+		}
+
+		if(this._filterClasses !== null) {
+			classes += ` filter-${this._filterClasses}`;
+		}
+		
+
+		return classes;
 	}
 }

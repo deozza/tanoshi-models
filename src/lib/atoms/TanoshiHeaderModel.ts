@@ -8,8 +8,9 @@ import {
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
 import type { HEADER_THEMES } from '$lib/enums/HeaderEnums.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiHeaderModel {
+export default class TanoshiHeaderModel implements ComponentModelInterface {
 	private _tag: HEADER_TAGS = HEADER_TAGS.H1;
 	private _fontSize: FONT_SIZES = FONT_SIZES['6Xl'];
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
@@ -86,5 +87,24 @@ export default class TanoshiHeaderModel {
 		this._textTheme = textTheme;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-header';
+
+		classes += ` text-theme-${this._textTheme}`;
+		classes += ` font-size-${this._fontSize}`;
+		classes += ` text-align-${this._textAlignment}`;
+		classes += ` font-weight-${this._fontWeight}`;
+
+		if(this._textTransform !== null) {
+			classes += ` text-transform-${this._textTransform}`;
+		}
+
+		if(this._textDecoration !== null) {
+			classes += ` text-decoration-${this._textDecoration}`;
+		}
+
+		return classes;
 	}
 }

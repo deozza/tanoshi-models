@@ -6,16 +6,17 @@ import {
 	type TEXT_DECORATIONS,
 	type TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
-import type { HOVER_LINK_THEMES, LINK_THEMES } from '$lib/enums/LinkEnums.js';
+import type { LINK_HOVER_THEMES, LINK_THEMES } from '$lib/enums/LinkEnums.js';
 import type { TARGET } from '$lib/types/link.types.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiLinkModel {
+export default class TanoshiLinkModel implements ComponentModelInterface {
 	private _href: string;
 	private _label: string = '';
 	private _isDisabled: boolean = false;
 	private _target: TARGET = '_self';
 	private _textTheme: THEMES | LINK_THEMES = THEMES.Primary;
-	private _hoverTextTheme: THEMES | HOVER_LINK_THEMES = THEMES.Primary;
+	private _hoverTextTheme: THEMES | LINK_HOVER_THEMES = THEMES.Primary;
 	private _fontSize: FONT_SIZES = FONT_SIZES.Md;
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
 	private _fontWeight: FONT_WEIGHTS = FONT_WEIGHTS.Regular;
@@ -76,11 +77,11 @@ export default class TanoshiLinkModel {
 		return this;
 	}
 
-	get hoverTextTheme(): THEMES | HOVER_LINK_THEMES {
+	get hoverTextTheme(): THEMES | LINK_HOVER_THEMES {
 		return this._hoverTextTheme;
 	}
 
-	public setHoverTextTheme(hoverTextTheme: THEMES | HOVER_LINK_THEMES): TanoshiLinkModel {
+	public setHoverTextTheme(hoverTextTheme: THEMES | LINK_HOVER_THEMES): TanoshiLinkModel {
 		this._hoverTextTheme = hoverTextTheme;
 
 		return this;
@@ -134,5 +135,25 @@ export default class TanoshiLinkModel {
 		this._textDecoration = textDecoration;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-link';
+
+		classes += ` text-theme-${this._textTheme}`;
+		classes += ` hover:text-theme-${this._hoverTextTheme}`;
+		classes += ` font-size-${this._fontSize}`;
+		classes += ` font-weight-${this._fontWeight}`;
+		classes += ` text-align-${this._textAlignment}`;
+
+		if (this._textTransform) {
+			classes += ` text-transform-${this._textTransform}`;
+		}
+
+		if (this._textDecoration) {
+			classes += ` text-decoration-${this._textDecoration}`;
+		}
+
+		return classes;
 	}
 }

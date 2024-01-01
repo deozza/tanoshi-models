@@ -8,8 +8,9 @@ import {
 	ALIGN_CONTENTS
 } from '$lib/enums/ContainerEnums.js';
 import { THEMES } from '$lib/enums/GlobalEnums.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiContainerModel {
+export default class TanoshiContainerModel implements ComponentModelInterface {
 	private _backgroundTheme: THEMES | CONTAINER_BACKGROUND_THEMES = THEMES.Transparent;
 	private _borderTheme: THEMES | CONTAINER_BORDER_THEMES = THEMES.Transparent;
 	private _desktopDirection: DIRECTIONS;
@@ -108,5 +109,20 @@ export default class TanoshiContainerModel {
 		this._alignContent = alignContent;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-container';
+
+		classes += ` bg-theme-${this._backgroundTheme}`;
+		classes += ` bd-theme-${this._borderTheme}`;
+		classes += ` desktop:direction-${this._desktopDirection}`;
+		classes += ` mobile:direction-${this._mobileDirection}`;
+		classes += ` ${this._wrap}`;
+		classes += ` justify-content-${this._justifyContent}`;
+		classes += ` align-items-${this._alignItems}`;
+		classes += ` align-content-${this._alignContent}`;
+
+		return classes;
 	}
 }

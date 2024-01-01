@@ -3,10 +3,10 @@ import type {
 	INPUT_BACKGROUND_THEMES,
 	INPUT_BORDER_THEMES,
 	INPUT_TEXT_THEMES
-} from '$lib/enums/TextEnums.js';
-import type { HTMLInputTypeAttribute } from 'svelte/elements';
+} from '$lib/enums/InputEnums.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiInputModel {
+export default class TanoshiInputModel implements ComponentModelInterface {
 	private _id: string;
 	private _name: string;
 	private _placeholder: string | null = null;
@@ -143,5 +143,30 @@ export default class TanoshiInputModel {
 		this._textTheme = textTheme;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-input';
+
+		if(this._isVisible === false) {
+			classes += ' hidden';
+
+			return classes;
+		}
+
+		classes += ` bg-theme-${this._backgroundTheme}`;
+		classes += ` bd-theme-${this._borderTheme}`;
+		classes += ` text-theme-${this._textTheme}`;
+
+		if (this._isDisabled) {
+			classes += ' disabled';
+		}
+
+		if (this._error) {
+			classes += ' error';
+		}
+
+		return classes;
+		
 	}
 }

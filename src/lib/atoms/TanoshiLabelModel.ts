@@ -7,8 +7,9 @@ import {
 	TEXT_TRANSFORMS
 } from '$lib/enums/TextEnums.js';
 import type { LABEL_THEMES } from '$lib/enums/LabelEnums.js';
+import type ComponentModelInterface from '$lib/interfaces/ComponentModelInterface.js';
 
-export default class TanoshiLabelModel {
+export default class TanoshiLabelModel implements ComponentModelInterface {
 	private _content: string = '';
 	private _forAttr: string;
 	private _textTheme: THEMES | LABEL_THEMES = THEMES.Primary;
@@ -17,7 +18,7 @@ export default class TanoshiLabelModel {
 	private _textAlignment: TEXT_ALIGNMENT = TEXT_ALIGNMENT.Left;
 	private _textTransform: TEXT_TRANSFORMS | null = null;
 	private _textDecoration: TEXT_DECORATIONS | null = null;
-	private _isVisibile: boolean = true;
+	private _isVisible: boolean = true;
 
 	constructor(forAttr: string) {
 		this._forAttr = forAttr;
@@ -103,13 +104,39 @@ export default class TanoshiLabelModel {
 		return this;
 	}
 
-	get isVisibile(): boolean {
-		return this._isVisibile;
+	get isVisible(): boolean {
+		return this._isVisible;
 	}
 
-	public setIsVisibile(isVisibile: boolean): TanoshiLabelModel {
-		this._isVisibile = isVisibile;
+	public setIsVisible(isVisible: boolean): TanoshiLabelModel {
+		this._isVisible = isVisible;
 
 		return this;
+	}
+
+	public getClasses(): string {
+		let classes: string = 'tanoshi-label';
+
+
+		if(this._isVisible === false) {
+			classes += ' hidden';
+
+			return classes;
+		}
+
+		classes += ` text-theme-${this._textTheme}`;
+		classes += ` font-size-${this._fontSize}`;
+		classes += ` font-weight-${this._fontWeight}`;
+		classes += ` text-align-${this._textAlignment}`;
+
+		if (this._textTransform) {
+			classes += ` text-transform-${this._textTransform}`;
+		}
+
+		if (this._textDecoration) {
+			classes += ` text-decoration-${this._textDecoration}`;
+		}
+
+		return classes;
 	}
 }
