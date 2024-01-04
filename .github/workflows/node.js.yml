@@ -12,6 +12,7 @@ jobs:
           node-version: "20"
       - run: npm ci
       - run: npm test
+      - run: npm run lint
       - run: npm run package
       - uses: JS-DevTools/npm-publish@v3
         with:
