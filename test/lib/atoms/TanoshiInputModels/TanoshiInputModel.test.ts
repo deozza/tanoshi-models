@@ -106,10 +106,10 @@ describe('TanoshiInputModel', () => {
 		);
 	});
 
-	test('set visible to false', () => {
+	test('set hidden to true', () => {
 		const tanoshiInputModel: TanoshiInputModel = new TanoshiInputModel('id', 'name');
 
-		tanoshiInputModel.setIsVisible(false);
+		tanoshiInputModel.setHidden(true);
 
 		expect(tanoshiInputModel.getClasses()).toEqual('tanoshi-input hidden');
 	});

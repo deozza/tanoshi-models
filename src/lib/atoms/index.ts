@@ -10,5 +10,6 @@ export { default as TanoshiPillModel } from './TanoshiPillModel.js';
 export { default as TanoshiInputChoiceModel } from './TanoshiInputModels/TanoshiInputChoiceModel.js';
 export { default as TanoshiInputFileModel } from './TanoshiInputModels/TanoshiInputFileModel.js';
 export { default as TanoshiInputNumberModel } from './TanoshiInputModels/TanoshiInputNumberModel.js';
+export { default as TanoshiInputOptionModel } from './TanoshiInputModels/TanoshiInputOptionModel.js';
 export { default as TanoshiInputTextModel } from './TanoshiInputModels/TanoshiInputTextModel.js';
 export { default as TanoshiInputTextareaModel } from './TanoshiInputModels/TanoshiInputTextareaModel.js';

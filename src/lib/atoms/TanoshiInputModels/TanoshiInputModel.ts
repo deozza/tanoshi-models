@@ -13,7 +13,7 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	private _isDisabled: boolean = false;
 	private _isReadonly: boolean = false;
 	private _isRequired: boolean = false;
-	private _isVisible: boolean = true;
+	private _hidden: boolean = false;
 	private _error: boolean = false;
 	private _errorMessage: string = '';
 	private _backgroundTheme: THEMES | INPUT_BACKGROUND_THEMES = THEMES.White;
@@ -101,12 +101,12 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 		return this;
 	}
 
-	get isVisible(): boolean {
-		return this._isVisible;
+	get hidden(): boolean {
+		return this._hidden;
 	}
 
-	public setIsVisible(isVisible: boolean) {
-		this._isVisible = isVisible;
+	public setHidden(hidden: boolean) {
+		this._hidden = hidden;
 
 		return this;
 	}
@@ -164,7 +164,7 @@ export default class TanoshiInputModel implements ComponentModelInterface {
 	public getClasses(): string {
 		let classes: string = 'tanoshi-input';
 
-		if (this._isVisible === false) {
+		if (this._hidden === true) {
 			classes += ' hidden';
 
 			return classes;
