@@ -1,38 +1,37 @@
-import TanoshiInputModel from "./TanoshiInputModel.js";
+import TanoshiInputModel from './TanoshiInputModel.js';
 
-export default class TanoshiInputOptionModel extends TanoshiInputModel{
+export default class TanoshiInputOptionModel extends TanoshiInputModel {
+	private _value: string | number | null = null;
+	private _selected: boolean = false;
+	private _disabled: boolean = false;
 
-    private _value: string | number | null = null;
-    private _selected: boolean = false;
-    private _disabled: boolean = false;
+	get value(): string | number | null {
+		return this._value;
+	}
 
-    get value(): string | number | null {
-        return this._value;
-    }
+	public setValue(value: string | number | null): TanoshiInputOptionModel {
+		this._value = value;
 
-    public setValue(value: string | number | null): TanoshiInputOptionModel {
-        this._value = value;
+		return this;
+	}
 
-        return this;
-    }
+	get selected(): boolean {
+		return this._selected;
+	}
 
-    get selected(): boolean {
-        return this._selected;
-    }
+	public setSelected(selected: boolean): TanoshiInputOptionModel {
+		this._selected = selected;
 
-    public setSelected(selected: boolean): TanoshiInputOptionModel {
-        this._selected = selected;
+		return this;
+	}
 
-        return this;
-    }
+	get disabled(): boolean {
+		return this._disabled;
+	}
 
-    get disabled(): boolean {
-        return this._disabled;
-    }
+	public setDisabled(disabled: boolean): TanoshiInputOptionModel {
+		this._disabled = disabled;
 
-    public setDisabled(disabled: boolean): TanoshiInputOptionModel {
-        this._disabled = disabled;
-
-        return this;
-    }
+		return this;
+	}
 }
