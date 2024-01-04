@@ -141,7 +141,7 @@ export default class TanoshiLinkModel implements ComponentModelInterface {
 		let classes: string = 'tanoshi-link';
 
 		classes += ` text-theme-${this._textTheme}`;
-		classes += ` hover:text-theme-${this._hoverTextTheme}`;
+		classes += ` hover-text-theme-${this._hoverTextTheme}`;
 		classes += ` font-size-${this._fontSize}`;
 		classes += ` text-align-${this._textAlignment}`;
 		classes += ` font-weight-${this._fontWeight}`;

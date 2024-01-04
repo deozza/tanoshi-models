@@ -179,7 +179,7 @@ export default class TanoshiImageModel implements ComponentModelInterface {
 		classes += ` cursor-${this._cursor}`;
 
 		if (this._hoverEffectClasses !== null) {
-			classes += ` hover:${this._hoverEffectClasses}`;
+			classes += ` hover-${this._hoverEffectClasses}`;
 		}
 
 		if (this._filterClasses !== null) {

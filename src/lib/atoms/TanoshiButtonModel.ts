@@ -121,11 +121,11 @@ export default class TanoshiButtonModel implements ComponentModelInterface {
 		let classes: string = 'tanoshi-button';
 
 		classes += ` text-theme-${this._textTheme}`;
-		classes += ` hover:text-theme-${this._hoverTextTheme}`;
+		classes += ` hover-text-theme-${this._hoverTextTheme}`;
 		classes += ` bg-theme-${this._backgroundTheme}`;
-		classes += ` hover:bg-theme-${this._hoverBackgroundTheme}`;
+		classes += ` hover-bg-theme-${this._hoverBackgroundTheme}`;
 		classes += ` bd-theme-${this._borderTheme}`;
-		classes += ` hover:bd-theme-${this._hoverBorderTheme}`;
+		classes += ` hover-bd-theme-${this._hoverBorderTheme}`;
 
 		return classes;
 	}

@@ -51,7 +51,7 @@ describe('TanoshiImageModel', () => {
 
 		tanoshiImageModel.setHoverEffectClasses('opacity-50');
 
-		expect(tanoshiImageModel.getClasses()).toEqual('tanoshi-image cursor-default hover:opacity-50');
+		expect(tanoshiImageModel.getClasses()).toEqual('tanoshi-image cursor-default hover-opacity-50');
 	});
 
 	test('set filter classes', () => {

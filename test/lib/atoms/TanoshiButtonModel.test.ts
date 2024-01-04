@@ -16,7 +16,7 @@ describe('TanoshiButtonModel', () => {
 		const tanoshiButtonModel: TanoshiButtonModel = new TanoshiButtonModel();
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -26,7 +26,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setTextTheme(THEMES.Primary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-primary hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-primary hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -36,7 +36,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setTextTheme(BUTTON_TEXT_THEMES.Primary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-button-text-primary hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-button-text-primary hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -46,7 +46,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverTextTheme(THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-secondary bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-secondary bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -56,7 +56,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverTextTheme(BUTTON_HOVER_TEXT_THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-button-hover-text-secondary bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-button-hover-text-secondary bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -66,7 +66,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setBackgroundTheme(THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-secondary hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-secondary hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -76,7 +76,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setBackgroundTheme(BUTTON_BACKGROUND_THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-button-bg-secondary hover:bg-theme-primary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-button-bg-secondary hover-bg-theme-primary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -86,7 +86,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverBackgroundTheme(THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-secondary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-secondary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -96,7 +96,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverBackgroundTheme(BUTTON_HOVER_BACKGROUND_THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-button-hover-bg-secondary bd-theme-transparent hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-button-hover-bg-secondary bd-theme-transparent hover-bd-theme-primary'
 		);
 	});
 
@@ -106,7 +106,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setBorderTheme(THEMES.Primary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-primary hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-primary hover-bd-theme-primary'
 		);
 	});
 
@@ -116,7 +116,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setBorderTheme(BUTTON_BORDER_THEMES.Primary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-button-bd-primary hover:bd-theme-primary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-button-bd-primary hover-bd-theme-primary'
 		);
 	});
 
@@ -126,7 +126,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverBorderTheme(THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-secondary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-secondary'
 		);
 	});
 
@@ -136,7 +136,7 @@ describe('TanoshiButtonModel', () => {
 		tanoshiButtonModel.setHoverBorderTheme(BUTTON_HOVER_BORDER_THEMES.Secondary);
 
 		expect(tanoshiButtonModel.getClasses()).toEqual(
-			'tanoshi-button text-theme-white hover:text-theme-white bg-theme-transparent hover:bg-theme-primary bd-theme-transparent hover:bd-theme-button-hover-bd-secondary'
+			'tanoshi-button text-theme-white hover-text-theme-white bg-theme-transparent hover-bg-theme-primary bd-theme-transparent hover-bd-theme-button-hover-bd-secondary'
 		);
 	});
 });

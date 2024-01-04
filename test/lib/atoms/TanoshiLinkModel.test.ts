@@ -17,7 +17,7 @@ describe('TanoshiLinkModel', () => {
 		const tanoshiLinkModel: TanoshiLinkModel = new TanoshiLinkModel('/');
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-md text-align-left font-weight-regular'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-md text-align-left font-weight-regular'
 		);
 	});
 
@@ -27,7 +27,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setTextTheme(THEMES.Primary);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-primary hover:text-theme-black font-size-md text-align-left font-weight-regular'
+			'tanoshi-link text-theme-primary hover-text-theme-black font-size-md text-align-left font-weight-regular'
 		);
 	});
 
@@ -37,7 +37,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setTextTheme(LINK_TEXT_THEMES.Primary);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-link-text-primary hover:text-theme-black font-size-md text-align-left font-weight-regular'
+			'tanoshi-link text-theme-link-text-primary hover-text-theme-black font-size-md text-align-left font-weight-regular'
 		);
 	});
 
@@ -47,7 +47,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setHoverTextTheme(THEMES.Primary);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-primary font-size-md text-align-left font-weight-regular'
+			'tanoshi-link text-theme-black hover-text-theme-primary font-size-md text-align-left font-weight-regular'
 		);
 	});
 
@@ -57,7 +57,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setHoverTextTheme(LINK_HOVER_TEXT_THEMES.Primary);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-link-hover-text-primary font-size-md text-align-left font-weight-regular'
+			'tanoshi-link text-theme-black hover-text-theme-link-hover-text-primary font-size-md text-align-left font-weight-regular'
 		);
 	});
 
@@ -67,7 +67,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setFontSize(FONT_SIZES['6Xl']);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-6xl text-align-left font-weight-regular'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-6xl text-align-left font-weight-regular'
 		);
 	});
 
@@ -77,7 +77,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setTextAlignment(TEXT_ALIGNMENT.Center);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-md text-align-center font-weight-regular'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-md text-align-center font-weight-regular'
 		);
 	});
 
@@ -87,7 +87,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setFontWeight(FONT_WEIGHTS.Bold);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-md text-align-left font-weight-bold'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-md text-align-left font-weight-bold'
 		);
 	});
 
@@ -97,7 +97,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setTextTransform(TEXT_TRANSFORMS.Capitalize);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-md text-align-left font-weight-regular text-transform-capitalize'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-md text-align-left font-weight-regular text-transform-capitalize'
 		);
 	});
 
@@ -107,7 +107,7 @@ describe('TanoshiLinkModel', () => {
 		tanoshiLinkModel.setTextDecoration(TEXT_DECORATIONS.Underline);
 
 		expect(tanoshiLinkModel.getClasses()).toEqual(
-			'tanoshi-link text-theme-black hover:text-theme-black font-size-md text-align-left font-weight-regular text-decoration-underline'
+			'tanoshi-link text-theme-black hover-text-theme-black font-size-md text-align-left font-weight-regular text-decoration-underline'
 		);
 	});
 });
