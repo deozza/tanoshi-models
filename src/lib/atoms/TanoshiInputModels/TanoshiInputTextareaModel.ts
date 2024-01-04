@@ -1,4 +1,3 @@
-import type { HTMLInputTypeAttribute } from 'svelte/elements';
 import TanoshiInputModel from './TanoshiInputModel.js';
 
 export default class TanoshiInputTextareaModel extends TanoshiInputModel {
