@@ -5,6 +5,17 @@ import TanoshiContainerModel from '../../../src/lib/molecules/TanoshiContainerMo
 import { DIRECTIONS } from '../../../src/lib/enums/ContainerEnums';
 
 describe('TanoshiModalModel', () => {
+	test('check setter return value', () => {
+		const tanoshiContainerModel: TanoshiContainerModel = new TanoshiContainerModel(
+			DIRECTIONS.Row,
+			DIRECTIONS.Row
+		);
+		const tanoshiModalModel: TanoshiModalModel = new TanoshiModalModel(tanoshiContainerModel);
+
+		expect(tanoshiModalModel.setHidden(true)).instanceOf(TanoshiModalModel);
+		expect(tanoshiModalModel.setContainer(tanoshiContainerModel)).instanceOf(TanoshiModalModel);
+	});
+
 	test('default classes', () => {
 		const tanoshiContainerModel: TanoshiContainerModel = new TanoshiContainerModel(
 			DIRECTIONS.Row,

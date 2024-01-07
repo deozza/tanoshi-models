@@ -13,6 +13,26 @@ import {
 } from '../../../src/lib/enums/TextEnums';
 
 describe('TanoshiLinkModel', () => {
+	test('check setter return value', () => {
+		const tanoshiLinkModel: TanoshiLinkModel = new TanoshiLinkModel('/');
+
+		expect(tanoshiLinkModel.setHref('/')).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setLabel('')).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setIsDisabled(true)).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setTarget('_blank')).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setTextTheme(THEMES.Primary)).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setHoverTextTheme(THEMES.Primary)).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setFontSize(FONT_SIZES['3Xl'])).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setTextAlignment(TEXT_ALIGNMENT.Center)).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setFontWeight(FONT_WEIGHTS.Bold)).instanceOf(TanoshiLinkModel);
+		expect(tanoshiLinkModel.setTextTransform(TEXT_TRANSFORMS.Capitalize)).instanceOf(
+			TanoshiLinkModel
+		);
+		expect(tanoshiLinkModel.setTextDecoration(TEXT_DECORATIONS.Underline)).instanceOf(
+			TanoshiLinkModel
+		);
+	});
+
 	test('default classes', () => {
 		const tanoshiLinkModel: TanoshiLinkModel = new TanoshiLinkModel('/');
 

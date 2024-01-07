@@ -9,6 +9,14 @@ import {
 } from '../../../src/lib/enums/PillEnums';
 
 describe('TanoshiPillModel', () => {
+	test('check setter return value', () => {
+		const tanoshiPillModel: TanoshiPillModel = new TanoshiPillModel();
+
+		expect(tanoshiPillModel.setTextTheme(THEMES.Primary)).instanceOf(TanoshiPillModel);
+		expect(tanoshiPillModel.setBackgroundTheme(THEMES.Primary)).instanceOf(TanoshiPillModel);
+		expect(tanoshiPillModel.setBorderTheme(THEMES.Primary)).instanceOf(TanoshiPillModel);
+	});
+
 	test('default classes', () => {
 		const tanoshiPillModel: TanoshiPillModel = new TanoshiPillModel();
 

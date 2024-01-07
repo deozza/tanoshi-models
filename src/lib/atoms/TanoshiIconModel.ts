@@ -1,7 +1,7 @@
 import { THEMES } from '$lib/enums/GlobalEnums.js';
 import type { ICON_THEMES } from '$lib/enums/IconEnums.js';
 
-export default class TanoshicontentModel {
+export default class TanoshiIconModel {
 	private _content: string = '';
 	private _height: number = 12;
 	private _width: number = 12;
@@ -15,7 +15,7 @@ export default class TanoshicontentModel {
 		return this._content;
 	}
 
-	public setContent(content: string): TanoshicontentModel {
+	public setContent(content: string): TanoshiIconModel {
 		this._content = content;
 
 		return this;
@@ -25,7 +25,7 @@ export default class TanoshicontentModel {
 		return this._height;
 	}
 
-	public setHeight(height: number): TanoshicontentModel {
+	public setHeight(height: number): TanoshiIconModel {
 		this._height = height;
 
 		return this;
@@ -35,7 +35,7 @@ export default class TanoshicontentModel {
 		return this._width;
 	}
 
-	public setWidth(width: number): TanoshicontentModel {
+	public setWidth(width: number): TanoshiIconModel {
 		this._width = width;
 
 		return this;
@@ -45,7 +45,7 @@ export default class TanoshicontentModel {
 		return this._theme;
 	}
 
-	public setTheme(theme: THEMES | ICON_THEMES): TanoshicontentModel {
+	public setTheme(theme: THEMES | ICON_THEMES): TanoshiIconModel {
 		this._theme = theme;
 
 		return this;

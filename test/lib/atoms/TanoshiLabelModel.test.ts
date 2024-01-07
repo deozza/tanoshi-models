@@ -13,6 +13,24 @@ import {
 import { LABEL_TEXT_THEMES } from '../../../src/lib/enums/LabelEnums';
 
 describe('TanoshiLabelModel', () => {
+	test('check setter return value', () => {
+		const tanoshiLabelModel: TanoshiLabelModel = new TanoshiLabelModel('text');
+
+		expect(tanoshiLabelModel.setContent('text')).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setForAttr('for')).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setTextTheme(THEMES.Primary)).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setFontSize(FONT_SIZES['3Xl'])).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setFontWeight(FONT_WEIGHTS.Bold)).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setTextAlignment(TEXT_ALIGNMENT.Center)).instanceOf(TanoshiLabelModel);
+		expect(tanoshiLabelModel.setTextTransform(TEXT_TRANSFORMS.Capitalize)).instanceOf(
+			TanoshiLabelModel
+		);
+		expect(tanoshiLabelModel.setTextDecoration(TEXT_DECORATIONS.Underline)).instanceOf(
+			TanoshiLabelModel
+		);
+		expect(tanoshiLabelModel.setIsVisible(false)).instanceOf(TanoshiLabelModel);
+	});
+
 	test('default classes', () => {
 		const tanoshiLabelModel: TanoshiLabelModel = new TanoshiLabelModel('text');
 

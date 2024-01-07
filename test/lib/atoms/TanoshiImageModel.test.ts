@@ -32,6 +32,23 @@ describe('TanoshiImageModel', () => {
 		}).toThrow();
 	});
 
+	test('check setter return value', () => {
+		const tanoshiImageModel: TanoshiImageModel = new TanoshiImageModel('src', 'alt');
+
+		expect(tanoshiImageModel.setSrc('src')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setAlt('alt')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setWidth(200)).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setDesktopWidth('200px')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setMobileWidth('200px')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setHeight(200)).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setDesktopHeight('200px')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setMobileHeight('200px')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setLoadingMethod('lazy')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setCursor('default')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setHoverEffectClasses('')).instanceOf(TanoshiImageModel);
+		expect(tanoshiImageModel.setFilterClasses('')).instanceOf(TanoshiImageModel);
+	});
+
 	test('default classes', () => {
 		const tanoshiImageModel: TanoshiImageModel = new TanoshiImageModel('src', 'alt');
 

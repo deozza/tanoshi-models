@@ -12,6 +12,22 @@ import {
 } from '../../../src/lib/enums/ButtonEnums';
 
 describe('TanoshiButtonModel', () => {
+	test('check setter return value', () => {
+		const tanoshiButtonModel: TanoshiButtonModel = new TanoshiButtonModel();
+
+		expect(tanoshiButtonModel.setTextTheme(THEMES.Primary)).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setHoverTextTheme(THEMES.Primary)).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setBackgroundTheme(THEMES.Primary)).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setHoverBackgroundTheme(THEMES.Primary)).instanceOf(
+			TanoshiButtonModel
+		);
+		expect(tanoshiButtonModel.setBorderTheme(THEMES.Primary)).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setHoverBorderTheme(THEMES.Primary)).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setLabel('')).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setType('button')).instanceOf(TanoshiButtonModel);
+		expect(tanoshiButtonModel.setIsDisabled(true)).instanceOf(TanoshiButtonModel);
+	});
+
 	test('default classes', () => {
 		const tanoshiButtonModel: TanoshiButtonModel = new TanoshiButtonModel();
 

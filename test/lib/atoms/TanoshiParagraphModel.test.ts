@@ -13,6 +13,25 @@ import {
 } from '../../../src/lib/enums/TextEnums';
 
 describe('TanoshiParagraphModel', () => {
+	test('check setter return value', () => {
+		const tanoshiParagraphModel: TanoshiParagraphModel = new TanoshiParagraphModel();
+
+		expect(tanoshiParagraphModel.setTextTheme(THEMES.Primary)).instanceOf(TanoshiParagraphModel);
+		expect(tanoshiParagraphModel.setFontSize(FONT_SIZES['3Xl'])).instanceOf(TanoshiParagraphModel);
+		expect(tanoshiParagraphModel.setTextAlignment(TEXT_ALIGNMENT.Center)).instanceOf(
+			TanoshiParagraphModel
+		);
+		expect(tanoshiParagraphModel.setFontWeight(FONT_WEIGHTS.Bold)).instanceOf(
+			TanoshiParagraphModel
+		);
+		expect(tanoshiParagraphModel.setTextTransform(TEXT_TRANSFORMS.Capitalize)).instanceOf(
+			TanoshiParagraphModel
+		);
+		expect(tanoshiParagraphModel.setTextDecoration(TEXT_DECORATIONS.Underline)).instanceOf(
+			TanoshiParagraphModel
+		);
+	});
+
 	test('default classes', () => {
 		const tanoshiParagraphModel: TanoshiParagraphModel = new TanoshiParagraphModel();
 

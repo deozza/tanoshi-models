@@ -12,6 +12,34 @@ import {
 } from '../../../src/lib/enums/ContainerEnums';
 
 describe('TanoshiContainerModel', () => {
+	test('check setter return value', () => {
+		const tanoshiContainerModel: TanoshiContainerModel = new TanoshiContainerModel(
+			DIRECTIONS.Row,
+			DIRECTIONS.Row
+		);
+
+		expect(tanoshiContainerModel.setBackgroundTheme(THEMES.Primary)).instanceOf(
+			TanoshiContainerModel
+		);
+		expect(tanoshiContainerModel.setBorderTheme(THEMES.Primary)).instanceOf(TanoshiContainerModel);
+		expect(tanoshiContainerModel.setDesktopDirection(DIRECTIONS.Column)).instanceOf(
+			TanoshiContainerModel
+		);
+		expect(tanoshiContainerModel.setMobileDirection(DIRECTIONS.Column)).instanceOf(
+			TanoshiContainerModel
+		);
+		expect(tanoshiContainerModel.setWrap(WRAPS.WrapReverse)).instanceOf(TanoshiContainerModel);
+		expect(tanoshiContainerModel.setJustifyContent(JUSTIFY_CONTENTS.Center)).instanceOf(
+			TanoshiContainerModel
+		);
+		expect(tanoshiContainerModel.setAlignItems(ALIGN_ITEMS.Center)).instanceOf(
+			TanoshiContainerModel
+		);
+		expect(tanoshiContainerModel.setAlignContent(ALIGN_CONTENTS.Center)).instanceOf(
+			TanoshiContainerModel
+		);
+	});
+
 	test('default classes', () => {
 		const tanoshiContainerModel: TanoshiContainerModel = new TanoshiContainerModel(
 			DIRECTIONS.Row,
